@@ -1,0 +1,14 @@
+#footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  @include flex(row, center, center, nowrap);
+
+  small{
+    padding: 25px;
+
+    @media all and (orientation: portrait) {
+      padding: 18px;
+     }
+  }
+}

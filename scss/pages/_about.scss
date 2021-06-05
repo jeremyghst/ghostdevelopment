@@ -1,0 +1,16 @@
+.landscape{
+  display: inline-block;
+  width: 100%;
+
+  @media all and (orientation: portrait) {
+    display: none;
+   }
+}
+
+.portrait{
+  display: none;
+
+  @media all and (orientation: portrait) {
+    @include flex(column, flex-start, flex-start, nowrap);
+   }
+}

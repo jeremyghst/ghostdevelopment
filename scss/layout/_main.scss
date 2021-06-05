@@ -1,0 +1,49 @@
+.page {
+	opacity: 0;
+	overflow: hidden;
+	height: 0;
+	width: 100%;
+	transition: opacity 0.8s ease;
+	
+    &.active {
+			height: 100vh;
+			max-height: 100vh;
+			display: flex;
+			align-items: center;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			opacity: 1; 
+			transition: opacity 0.8s ease;
+		}
+
+		&.first_page{
+			background-image: url("../../assets/ghost_background_landscape1/ghost_background_landscape1.svg");
+
+			@media all and (orientation: portrait) {
+				background-image: url("../../assets/ghost_background_portrait1/ghost_background_portrait1.svg");
+			}
+		}
+		&.second_page{
+			background-image: url("../../assets/ghost_background_landscape2/ghost_background_landscape2.svg");
+			
+			@media all and (orientation: portrait) {
+				background-image: url("../../assets/ghost_background_portrait2/ghost_background_portrait2.svg");
+			}
+		}
+		&.third_page{
+			background-image: url("../../assets/ghost_background_landscape3/ghost_background_landscape3.svg");
+
+			@media all and (orientation: portrait) {
+				background-image: url("../../assets/ghost_background_portrait3/ghost_background_portrait3.svg");
+			}
+		}
+		&.fourth_page{
+			background-image: url("../../assets/ghost_background_landscape4/ghost_background_landscape4.svg");
+
+			@media all and (orientation: portrait) {
+				background-image: url("../../assets/ghost_background_portrait4/ghost_background_portrait4.svg");
+			}
+		}
+}
+

@@ -1,0 +1,30 @@
+// Ghost colors
+$ghost_blue: #293282;
+$ghost_blue_transparent: #293282AA;
+$ghost_red: #821C46;
+$ghost_red_transparent: #821C46AA;
+
+// Color
+$orange: #FBBA2F;
+$orange_transparent: #FBBA2FAA;
+
+// Text
+$transparent_offwhite: #FAFAFAAA;
+$text_color: $transparent_offwhite;
+
+// Font
+$bitter : 'Bitter',
+serif;
+
+// Background
+$transparent_black: #00000066;
+$background_color: $transparent_black;
+$background_radiant_body: linear-gradient(to right, black, $ghost_blue_transparent, $ghost_red_transparent, black);
+$background_radiant_profilephoto: linear-gradient(to right, $ghost_blue, $ghost_red);
+
+// Shadow
+$drop_shadow: drop-shadow(16px 16px 10px black);
+$text_shadow: 8px 8px 5px black;
+$image_shadow: drop-shadow(16px 16px 30px rgba(0, 0, 0, 0.9));
+
+$fontsize: 6em;

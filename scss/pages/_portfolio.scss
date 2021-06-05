@@ -1,0 +1,27 @@
+.portfolioBtns{
+  @include flex(row, space-around, flex-start, nowrap);
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+
+  button{
+    width: 200px;
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+    @include flex(row, center, center, nowrap);
+
+    @media all and (orientation: portrait) {
+      width: 100px;
+     }
+
+    &:hover{
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

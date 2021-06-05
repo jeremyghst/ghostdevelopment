@@ -1,0 +1,53 @@
+#skillArticle{
+
+  .articleContainer{
+    @include flex(column, space-between, center, nowrap);
+    height: 100%;
+  }
+
+  .progressbar{
+    position: relative;
+    z-index: -99;
+    width: 100%;
+    @include flex(row, center, center, nowrap);
+    
+    @media all and (orientation: portrait){
+      @include flex(column, flex-start, flex-start, nowrap);
+      margin: 20px 0;
+    }
+    p{
+      width: 60px;
+        color: #FFF;
+    }
+    .bar{
+      width: 500px;
+      margin-left: 50px;
+      height: 20px;
+      background-color: #FFF6;
+      border-radius: 10px;
+      
+      @media all and (orientation: portrait){
+        margin: 20px 0;
+        width: 100%;
+      }
+
+      .progress{
+        background-color: #000080;
+        height: 20px;
+        border-radius: 10px;
+        @include flex(row, flex-end, center, nowrap);
+        color: white;
+        padding-right: 20px;
+        transition:  1.5s;
+        width: 0;
+        overflow: hidden;
+        color: white;
+
+
+        @media all and (orientation: portrait){
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
