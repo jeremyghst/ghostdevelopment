@@ -12,15 +12,18 @@ body{
 
 main{
   width: 500px;
+  max-width: 90%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(0px 1px 100px #000);
 }
 
   main header, main footer{
     height: 10%;
-    background-color: #656176;
+    background-image: linear-gradient(to bottom right, #302E38, #656176);
+    border: solid 3px #302E38;'
   }
     main header{
       border-top-left-radius: 15px;
@@ -50,7 +53,8 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    border-left: solid 3px #302E38;
+    border-right: solid 3px #302E38;
   }
     main article .messages p{
       border-radius: 10px;
