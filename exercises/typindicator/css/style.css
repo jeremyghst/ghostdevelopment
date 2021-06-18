@@ -7,7 +7,17 @@
 body{
   height: 100vh;
   width: 100vw;
-  background-color: #25D366;
+  background-image: url("/assets/ghost_background_landscape3/ghost_background_landscape3.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+@media all and (orientation: portrait) {
+  body{
+    background-image: url("/assets/ghost_background_portrait3/ghost_background_portrait3.svg");
+  }
 }
 
 main{
@@ -23,7 +33,7 @@ main{
   main header, main footer{
     height: 10%;
     background-image: linear-gradient(to bottom right, #302E38, #656176);
-    border: solid 3px #302E38;'
+    border: solid 3px #302E38;
   }
     main header{
       border-top-left-radius: 15px;
@@ -38,16 +48,17 @@ main{
     }
       main footer input{
         border: none;
-        background-image: url("../assets/background.png");
+        background-color: #e5ddd5AA;
         background-position: center;
         background-size: contain;
         border-radius: 10px;
         padding: 10px 5px;
+        font-size: inherit
       }
 
   main article{
     height: 80%;
-    background-image: url("../assets/background.png");
+    background-color: #e5ddd5AA;
     background-position: center;
     background-size: contain;
     display: flex;
@@ -66,7 +77,7 @@ main{
     }
 
       main article .messages p:nth-child(1){
-        background-color: #15793A;
+        background-color: #0F3D00;
         margin-left: auto;
       }
       main article .messages p:nth-child(2){
