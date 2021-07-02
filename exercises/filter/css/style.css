@@ -126,4 +126,10 @@ footer{
     .filterItem.price span, .filterItem.price label{
         margin: 5px 0;
     }
+
+    .object{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
 }
