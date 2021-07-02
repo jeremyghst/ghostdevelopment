@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #558C8C, #172626);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 50px;
+    font-size: 16px;
+}
+
+#postForm, article{
+    background-color: #EFF7FF;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+}
+    #postForm{
+        position: sticky;
+        top: 50px;
+        width: 500px;
+        max-width: 40%;
+        margin-right: 50px;
+    }
+
+    #postForm .formItem{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    #postForm .formItem.dateItem{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .dateItem #dateP{
+        margin-left: 5px;
+    }
+
+    .formItem *{
+        margin: 5px 0;
+    }
+
+    .formItem.date *{
+        margin: 5px;
+    }
+
+    .formItem .message{
+        resize: none;
+    }
+
+    #postBtn{
+        display: block;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin: auto;
+        color: #EFF7FF;
+        background-color: #558C8C;
+    }
+        #postBtn:hover{
+            background-color: #558C8CCC;
+        }
+        #postBtn:active{
+            background-color: #558C8C66;
+        }
+
+#searchBar{
+    margin-top: 100px;
+}
+
+input{
+    font-size: inherit;
+}
+
+article{
+    width: 1000px;
+    max-width: 60%;
+}
+
+h1{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+    text-align: center;
+}
+
+article .post{
+    position: relative;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+    .post h2{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .post p{
+        margin: 25px 0;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+    }
+
+    .post small{
+        display: block;
+        text-align: right;
+    }
+
+    .deleteBtn{
+        position: absolute;
+        right: 20px;
+        background-color: #82204A;
+        padding: 5px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+        .deleteBtn:hover{
+            background-color: #82204AAA;
+        }
+        .deleteBtn:active{
+            background-color: #82204A66;
+        }
+
+
+@media all and (max-width: 1000px) {
+    body{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    article, #postForm{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #postForm{
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
