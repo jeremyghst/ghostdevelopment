@@ -61,7 +61,7 @@ aside{
 article{
     width: 1000px;
 }
-    #elementContainer{
+    #objectContainer{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -69,7 +69,7 @@ article{
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .element{
+    .object{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -80,11 +80,11 @@ article{
 
     }
 
-    .element.circle{
+    .object.circle{
         border-radius: 50%;
     }
 
-    .noElements{
+    .noObjects{
         font-size: 20px;
         margin: 20px;
     }

@@ -1,13 +1,13 @@
 "use strict"
 
-import { elementArray, filterArray, color, shape, price } from "./class.js";
+import { objectArray, filterArray, color, shape, price } from "./class.js";
 
 
 const checkboxes = Array.from(document.querySelectorAll("input[type='checkbox']"));
 const priceRange = Array.from(document.querySelectorAll("input[type='range']"));
 const inputFilter = checkboxes.concat(priceRange);
 
-const elementContainer = document.getElementById("elementContainer");
+const objectContainer = document.getElementById("objectContainer");
 const resetButton = document.getElementById("resetButton");
 
 const minPriceRange = document.getElementById("minPriceRange");
@@ -25,8 +25,8 @@ inputFilter.forEach(box => {
 
 resetButton.addEventListener("click", resetFilters);
 
-function generateElements(){
-    elementContainer.innerHTML = "";
+function generateObjects(){
+    objectContainer.innerHTML = "";
 
     if(filterArray.color.length === 0){
         filterArray.color = color;
@@ -38,13 +38,13 @@ function generateElements(){
         filterArray.price = price;
     }
 
-    elementArray.forEach(element => {
+    objectArray.forEach(element => {
 
         if(filterArray.color.includes(element.color) && 
             filterArray.shape.includes(element.shape) && 
             element.price >= filterArray.price[0] && element.price <= filterArray.price[1]){
             const div = document.createElement("div");
-            div.classList.add("element");
+            div.classList.add("object");
 
             if(element.shape === "circle"){
                 div.classList.add("circle");
@@ -52,18 +52,18 @@ function generateElements(){
 
             div.style.backgroundColor = element.color;
             div.innerText = "$" + element.price;
-            elementContainer.appendChild(div);
+            objectContainer.appendChild(div);
         }
     })
 
-    if(elementContainer.innerHTML === ""){
+    if(objectContainer.innerHTML === ""){
         const paragraph = document.createElement("p");
-        paragraph.innerText = "No elements found...";
-        paragraph.classList.add("noElements");
-        elementContainer.appendChild(paragraph);
+        paragraph.innerText = "No objects found...";
+        paragraph.classList.add("noObjects");
+        objectContainer.appendChild(paragraph);
     }
 }
-generateElements();
+generateObjects();
 
 
 function filter(){
@@ -92,7 +92,7 @@ function filter(){
         maxPriceRange.min = (parseInt(minPriceRange.value) + 20 > 100 ? 100 : parseInt(minPriceRange.value) + 20);
     }
 
-    generateElements();
+    generateObjects();
 }
 
 function resetFilters(){
