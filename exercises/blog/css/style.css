@@ -76,7 +76,7 @@ body{
     margin-top: 100px;
 }
 
-input{
+input, textarea{
     font-size: inherit;
 }
 
