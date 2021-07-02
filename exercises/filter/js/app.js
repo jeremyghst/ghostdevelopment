@@ -88,8 +88,8 @@ function filter(){
         minPrice.innerText = minPriceRange.value;
 
         filterArray.price[1] = maxPriceRange.value;
-        maxPrice.innerText = maxPriceRange.value;
         maxPriceRange.min = (parseInt(minPriceRange.value) + 20 > 100 ? 100 : parseInt(minPriceRange.value) + 20);
+        maxPrice.innerText = maxPriceRange.value;
     }
 
     generateObjects();
