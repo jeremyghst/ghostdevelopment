@@ -23,7 +23,6 @@ h2{
 
 aside{
     width: 600px;
-    max-width: 90%;
 }
     aside ul{
         margin: 50px 10px;
@@ -61,7 +60,6 @@ aside{
 
 article{
     width: 1000px;
-    max-width: 90%;
 }
     #elementContainer{
         width: 100%;
@@ -98,6 +96,7 @@ aside, article{
     background-color: white;
     box-shadow: 5px 5px 15px black;
     margin: 0 50px;
+    max-width: 95%;
 }
 
 footer{

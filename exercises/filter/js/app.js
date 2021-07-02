@@ -20,7 +20,7 @@ maxPrice.innerText = maxPriceRange.value;
 minPrice.innerText = minPriceRange.value;
 
 inputFilter.forEach(box => {
-    box.addEventListener("click", filter);
+    box.addEventListener("change", filter);
 })
 
 resetButton.addEventListener("click", resetFilters);
