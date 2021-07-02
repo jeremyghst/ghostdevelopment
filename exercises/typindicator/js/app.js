@@ -28,7 +28,7 @@ function showTypeIndicator(){
     if(inputField.value === ""){
       removeTypeIndicator();
       }
-    }, 3000); 
+    }, 1500); 
   
   return;    
 }
@@ -66,7 +66,7 @@ function timerTypeIndicator(inputFieldParameter){
         timerTypeIndicator();
         return;
       }
-    }, 3000); 
+    }, 1500); 
 }
 
 function timerActiveTypeIndicator(inputFieldValue){
@@ -77,6 +77,6 @@ function timerActiveTypeIndicator(inputFieldValue){
     } else {
       return;
     }
-  }, 3000); 
+  }, 1500); 
 }
 
