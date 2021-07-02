@@ -110,7 +110,7 @@ main{
 
       main article .indicator.typing .dot{
         animation-name: typeIndicator;
-        animation-duration: 1s;
+        animation-duration: 1.5s;
         animation-iteration-count: infinite;
       }
 
