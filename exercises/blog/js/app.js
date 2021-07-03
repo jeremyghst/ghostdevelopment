@@ -32,18 +32,12 @@ setInterval(setDate, 1000);
 
 function createMessage(){
     const message = new Message;
-    
     messageArray.push(message.create());
-
-    generateMessages(messageArray);
+    message.show(messageArray);
     return false;
 }
 
-function generateMessages(){
-    messageArray.forEach(message => {
-        postArticle.insertBefore(message, postArticle.childNodes[0]);
-    })
-}
+
 
 function search(){
     Array.from(posts).forEach(post => {
@@ -66,7 +60,11 @@ function showUpdatePost(){
 }
 
 function updatePost(){
-
+    messageArray.forEach(message => {
+        if(message.id == this.parentNode.querySelector("input[type='hidden']").value){
+            message = message.update();
+        }
+    })
     closeModule();
 }
 

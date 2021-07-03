@@ -25,46 +25,53 @@ class Message{
             this.title = messageTitle.value;
             this.message = messageMessage.value;
             this.date = dateTime;
-
-            const post = document.createElement("div");
-            post.classList.add("post");
-            post.addEventListener("click", showUpdatePost)
-
-            const hiddenInput = document.createElement("input");
-            hiddenInput.value = this.id;
-            hiddenInput.type = "hidden";
-
-            const title = document.createElement("h2");
-            title.innerText = this.title;
-
-            const paragraph = document.createElement("p");
-            paragraph.innerText = this.message;
-
-            const small = document.createElement("small");
-            small.innerText = "Date: " + this.date;
-
-            const deleteBtn = document.createElement("button");
-            deleteBtn.innerText = "X";
-            deleteBtn.classList.add("deleteBtn");
-            deleteBtn.addEventListener("click", this.delete);
-
-            post.append(hiddenInput, deleteBtn, title, paragraph, small);
-         
             i++;
 
-            searchBar.focus();
-
-            return post;
-        } else {
-            return;
+            return this;
         }
+    }
+    
+    show(){
+        postArticle.innerHTML = "";
+
+        messageArray.forEach(message => {
+        const post = document.createElement("div");
+        post.classList.add("post");
+        post.addEventListener("click", showUpdatePost)
+
+        const hiddenInput = document.createElement("input");
+        hiddenInput.value = message.id;
+        hiddenInput.type = "hidden";
+
+        const title = document.createElement("h2");
+        title.innerText = message.title;
+
+        const paragraph = document.createElement("p");
+        paragraph.innerText = message.message;
+
+        const small = document.createElement("small");
+        small.innerText = "Date: " + message.date;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "X";
+        deleteBtn.classList.add("deleteBtn");
+        deleteBtn.addEventListener("click", message.delete);
+
+        post.append(hiddenInput, deleteBtn, title, paragraph, small);
+     
+        
+
+        searchBar.focus();
+        postArticle.insertBefore(post, postArticle.childNodes[0]);
+
+        })
     }
 
     update(){
-        message.title = document.getElementById("moduleTitle").value;
-        message.message = document.getElementById("moduleMessage").value;
+        this.title = document.getElementById("moduleTitle").value;
+        this.message = document.getElementById("moduleMessage").value;
 
-        alert('test');
+        this.show();
     }
 
     delete(){
@@ -73,6 +80,6 @@ class Message{
             postArticle.removeChild(post);
         }
 
-        return false;
+        return;
     }
 }
