@@ -11,7 +11,6 @@ class Message{
     }
 
     create(){
-        if(document.getElementById("messageTitle").value !== "" && document.getElementById("message").value !== ""){
             const today = new Date();
             const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
             const time = today.getHours() + ":" + today.getMinutes() + ":" + ((today.getSeconds() < 10) ? "0" + today.getSeconds() : today.getSeconds());
@@ -28,7 +27,6 @@ class Message{
             i++;
 
             return this;
-        }
     }
     
     show(){
@@ -65,6 +63,8 @@ class Message{
         postArticle.insertBefore(post, postArticle.childNodes[0]);
 
         })
+
+        return;
     }
 
     update(){
@@ -79,8 +79,17 @@ class Message{
             const post = this.parentNode;
             postArticle.removeChild(post);
 
+            messageArray.forEach(message => {
+                if(message.id == post.querySelector("input[type='hidden']").value){
+                    const index = messageArray.indexOf(message);
+                    if (index > -1) {
+                        messageArray.splice(index, 1);
+                    }
+                }
+            })
+
         }
-        closeModule()
-        return false;
+        event.stopImmediatePropagation();
+        return;
     }
 }

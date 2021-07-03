@@ -31,10 +31,13 @@ function setDate(){
 setInterval(setDate, 1000);
 
 function createMessage(){
+    if(document.getElementById("messageTitle").value !== "" && document.getElementById("message").value !== ""){
+
     const message = new Message;
     messageArray.push(message.create());
     message.show(messageArray);
-    return false;
+    }
+    return;
 }
 
 
@@ -56,7 +59,7 @@ function showUpdatePost(){
     document.getElementById("moduleMessage").value = this.getElementsByTagName("p")[0].innerText;
     document.getElementById("moduleId").value = this.querySelector("input[type='hidden']").value;
 
-    return false;
+    return;
 }
 
 function updatePost(){
@@ -71,5 +74,5 @@ function updatePost(){
 function closeModule(){
     module.classList.remove("visible");
 
-    return false;
+    return;
 }
