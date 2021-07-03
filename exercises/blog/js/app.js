@@ -4,11 +4,19 @@
 const dateP = document.getElementById("dateP");
 const postArticle = document.getElementById("postArticle");
 const posts = document.getElementsByClassName("post");
+const module = document.getElementById("module");
 
 const postBtn = document.getElementById("postBtn");
+const closeBtn = document.getElementById("closeBtn");
+const updateBtn = document.getElementById("updateBtn");
+
 const searchBarInput = document.getElementById("searchBarInput");
+const messageArray = [];
 
 postBtn.addEventListener("click", createMessage);
+closeBtn.addEventListener("click", closeModule);
+updateBtn.addEventListener("click", updatePost);
+
 searchBarInput.addEventListener("input", search);
 
 function setDate(){
@@ -17,14 +25,24 @@ function setDate(){
     const time = ((today.getHours() < 10) ? "0" + today.getHours() : today.getHours()) + ":" + ((today.getMinutes() < 10) ? "0" + today.getMinutes() : today.getMinutes()) + ":" + ((today.getSeconds() < 10) ? "0" + today.getSeconds() : today.getSeconds());
     const dateTime = date+' '+time;
     dateP.innerText = dateTime;
+
+    return dateTime;
 }
 setInterval(setDate, 1000);
 
 function createMessage(){
     const message = new Message;
-    message.create();
+    
+    messageArray.push(message.create());
 
+    generateMessages(messageArray);
     return false;
+}
+
+function generateMessages(){
+    messageArray.forEach(message => {
+        postArticle.insertBefore(message, postArticle.childNodes[0]);
+    })
 }
 
 function search(){
@@ -35,4 +53,25 @@ function search(){
             post.style.display = "block"
         }
     })
+}
+
+function showUpdatePost(){
+    module.classList.add("visible");
+
+    document.getElementById("moduleTitle").value = this.getElementsByTagName("h2")[0].innerText;
+    document.getElementById("moduleMessage").value = this.getElementsByTagName("p")[0].innerText;
+    document.getElementById("moduleId").value = this.querySelector("input[type='hidden']").value;
+
+    return false;
+}
+
+function updatePost(){
+
+    closeModule();
+}
+
+function closeModule(){
+    module.classList.remove("visible");
+
+    return false;
 }

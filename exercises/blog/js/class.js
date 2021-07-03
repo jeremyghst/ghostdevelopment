@@ -1,7 +1,10 @@
 "use strict"
 
+let i = 0;
+
 class Message{
-    constructor(title, message, date){
+    constructor(id, title, message, date, i){
+        this.id = id;
         this.title = title;
         this.message = message;
         this.date = date;
@@ -18,12 +21,18 @@ class Message{
             let messageMessage = document.getElementById("message");
             const searchBar = document.getElementById("searchBarInput");
 
+            this.id = i;
             this.title = messageTitle.value;
             this.message = messageMessage.value;
             this.date = dateTime;
 
             const post = document.createElement("div");
             post.classList.add("post");
+            post.addEventListener("click", showUpdatePost)
+
+            const hiddenInput = document.createElement("input");
+            hiddenInput.value = this.id;
+            hiddenInput.type = "hidden";
 
             const title = document.createElement("h2");
             title.innerText = this.title;
@@ -39,14 +48,23 @@ class Message{
             deleteBtn.classList.add("deleteBtn");
             deleteBtn.addEventListener("click", this.delete);
 
-            post.append(deleteBtn, title, paragraph, small);
-
-            postArticle.insertBefore(post, postArticle.childNodes[0]);
+            post.append(hiddenInput, deleteBtn, title, paragraph, small);
+         
+            i++;
 
             searchBar.focus();
+
+            return post;
         } else {
             return;
         }
+    }
+
+    update(){
+        message.title = document.getElementById("moduleTitle").value;
+        message.message = document.getElementById("moduleMessage").value;
+
+        alert('test');
     }
 
     delete(){
@@ -54,5 +72,7 @@ class Message{
             const post = this.parentNode;
             postArticle.removeChild(post);
         }
+
+        return false;
     }
 }

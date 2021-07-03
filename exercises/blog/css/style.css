@@ -29,7 +29,7 @@ body{
         margin-right: 50px;
     }
 
-    #postForm .formItem{
+    #postForm .formItem, #module .formItem{
         display: flex;
         flex-direction: column;
         margin: 10px 0;
@@ -56,7 +56,7 @@ body{
         resize: none;
     }
 
-    #postBtn{
+    #postBtn, #updateBtn{
         display: block;
         padding: 10px;
         border: none;
@@ -70,6 +70,16 @@ body{
         }
         #postBtn:active{
             background-color: #558C8C66;
+        }
+    #updateBtn{
+        background-color: #EFF7FF;
+        color: #558C8C;
+    }
+        #updateBtn:hover{
+            background-color: #EFF7FFCC;
+        }
+        #updateBtn:active{
+            background-color: #EFF7FF66;
         }
 
 #searchBar{
@@ -98,7 +108,11 @@ article .post{
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
+    border: solid 1px #FFF;
 }
+    article .post:hover{
+        border: solid 1px #82204A;
+    }
 
     .post h2{
         font-size: 18px;
@@ -117,7 +131,7 @@ article .post{
         text-align: right;
     }
 
-    .deleteBtn{
+    .deleteBtn, #closeBtn{
         position: absolute;
         right: 20px;
         background-color: #82204A;
@@ -126,10 +140,10 @@ article .post{
         border: none;
         border-radius: 5px;
     }
-        .deleteBtn:hover{
+        .deleteBtn:hover, #closeBtn:hover{
             background-color: #82204AAA;
         }
-        .deleteBtn:active{
+        .deleteBtn:active, #closeBtn:active{
             background-color: #82204A66;
         }
 
@@ -152,4 +166,33 @@ article .post{
         margin-bottom: 20px;
         margin-right: 0;
     }
+}
+
+#module{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100vw;
+    height: 100%;
+    width: 100%;
+    background-color: #000C;
+}
+    #module.visible{
+        left: 0vw;
+    }
+#moduleForm{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 600px;
+    background-color: #558C8C;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #FFF;
+    width: 500px;
+    max-width: 100%;
 }
