@@ -176,7 +176,7 @@ article .post{
     left: -100vw;
     height: 100%;
     width: 100%;
-    background-color: #000C;
+    background-color: #0E070EDD;
 }
     #module.visible{
         left: 0vw;
@@ -192,7 +192,6 @@ article .post{
     background-color: #558C8C;
     padding: 20px 50px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px #FFF;
     width: 500px;
     max-width: 100%;
 }
