@@ -1,5 +1,6 @@
 "use strict"
 
+const body = document.body;
 
 const dateP = document.getElementById("dateP");
 const postArticle = document.getElementById("postArticle");
@@ -54,7 +55,9 @@ function search(){
 
 function showUpdatePost(){
     module.classList.add("visible");
-    
+    body.classList.add("body_visible");
+ 
+    document.documentElement.scrollTop = 0;
     document.getElementById("moduleTitle").value = this.getElementsByTagName("h2")[0].innerText;
     document.getElementById("moduleMessage").value = this.getElementsByTagName("p")[0].innerText;
     document.getElementById("moduleId").value = this.querySelector("input[type='hidden']").value;
@@ -73,6 +76,7 @@ function updatePost(){
 
 function closeModule(){
     module.classList.remove("visible");
+    body.classList.remove("body_visible");
 
     return;
 }
