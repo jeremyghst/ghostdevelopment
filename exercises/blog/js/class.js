@@ -74,12 +74,13 @@ class Message{
         this.show();
     }
 
-    delete(){
+    delete(event){
         if(confirm("Are you sure you want to delete this message?")){
             const post = this.parentNode;
             postArticle.removeChild(post);
-        }
 
-        return;
+        }
+        closeModule()
+        return false;
     }
 }
