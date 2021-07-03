@@ -6,15 +6,14 @@
 
 body{
     background-image: linear-gradient(to bottom right, #558C8C, #172626);
-    min-height: 100vh;
     display: flex;
+    min-height: 100vh;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
     padding: 50px;
     font-size: 16px;
 }
-
 
 #postForm, article{
     background-color: #EFF7FF;

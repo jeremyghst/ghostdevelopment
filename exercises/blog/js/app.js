@@ -21,7 +21,7 @@ searchBarInput.addEventListener("input", search);
 
 function setDate(){
     const today = new Date();
-    const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    const date = ((today.getDate() < 10) ? "0" + today.getDate() : today.getDate())+'-'+((today.getMonth()+1 < 10) ? "0" + (today.getMonth()+1) : today.getMonth()+1)+'-'+today.getFullYear();
     const time = ((today.getHours() < 10) ? "0" + today.getHours() : today.getHours()) + ":" + ((today.getMinutes() < 10) ? "0" + today.getMinutes() : today.getMinutes()) + ":" + ((today.getSeconds() < 10) ? "0" + today.getSeconds() : today.getSeconds());
     const dateTime = date+' '+time;
     dateP.innerText = dateTime;
@@ -54,7 +54,7 @@ function search(){
 
 function showUpdatePost(){
     module.classList.add("visible");
-
+    
     document.getElementById("moduleTitle").value = this.getElementsByTagName("h2")[0].innerText;
     document.getElementById("moduleMessage").value = this.getElementsByTagName("p")[0].innerText;
     document.getElementById("moduleId").value = this.querySelector("input[type='hidden']").value;
