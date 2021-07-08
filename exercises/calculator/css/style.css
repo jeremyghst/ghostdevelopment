@@ -12,13 +12,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    font-size: 20px;
 }
 
 #calculator{
     height: 650px;
     width: 400px;
-    max-width: 98%;
-    max-height: 98%;
+    max-width: 90%;
+    max-height: 100%;
     background-color: #869b93;
     border-radius: 10px;    
 }
