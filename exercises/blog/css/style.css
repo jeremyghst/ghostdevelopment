@@ -6,17 +6,13 @@
 
 body{
     background-image: linear-gradient(to bottom right, #558C8C, #172626);
-    display: flex;
     min-height: 100vh;
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
     padding: 50px;
     font-size: 16px;
-}
-.body_visible{
-    max-height: 100vh;
-    overflow: hidden;
 }
 
 #postForm, article{
@@ -33,7 +29,7 @@ body{
         margin-right: 50px;
     }
 
-    #postForm .formItem, #module .formItem{
+    #postForm .formItem, #searchBar .formItem{
         display: flex;
         flex-direction: column;
         margin: 10px 0;
@@ -60,7 +56,7 @@ body{
         resize: none;
     }
 
-    #postBtn, #updateBtn{
+    #postBtn{
         display: block;
         padding: 10px;
         border: none;
@@ -75,22 +71,12 @@ body{
         #postBtn:active{
             background-color: #558C8C66;
         }
-    #updateBtn{
-        background-color: #EFF7FF;
-        color: #558C8C;
-    }
-        #updateBtn:hover{
-            background-color: #EFF7FFCC;
-        }
-        #updateBtn:active{
-            background-color: #EFF7FF66;
-        }
 
 #searchBar{
-    margin-top: 100px;
+    margin: 15px;
 }
 
-input, textarea{
+input{
     font-size: inherit;
 }
 
@@ -112,11 +98,7 @@ article .post{
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    border: solid 1px #FFF;
 }
-    article .post:hover{
-        border: solid 1px #82204A;
-    }
 
     .post h2{
         font-size: 18px;
@@ -135,7 +117,7 @@ article .post{
         text-align: right;
     }
 
-    .deleteBtn, #closeBtn{
+    .deleteBtn{
         position: absolute;
         right: 20px;
         background-color: #82204A;
@@ -144,10 +126,10 @@ article .post{
         border: none;
         border-radius: 5px;
     }
-        .deleteBtn:hover, #closeBtn:hover{
+        .deleteBtn:hover{
             background-color: #82204AAA;
         }
-        .deleteBtn:active, #closeBtn:active{
+        .deleteBtn:active{
             background-color: #82204A66;
         }
 
@@ -170,32 +152,4 @@ article .post{
         margin-bottom: 20px;
         margin-right: 0;
     }
-}
-
-#module{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: -100vw;
-    height: 100vh;
-    width: 100%;
-    background-color: #0E070EDD;
-}
-    #module.visible{
-        left: 0vw;
-    }
-#moduleForm{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 500px;
-    background-color: #558C8C;
-    padding: 20px 50px;
-    border-radius: 10px;
-    width: 500px;
-    max-width: 100%;
 }
