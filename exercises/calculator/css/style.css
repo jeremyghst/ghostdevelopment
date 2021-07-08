@@ -20,7 +20,7 @@ body{
     height: 650px;
     width: 400px;
     max-width: 90%;
-    max-height: 100%;
+    height: 80%;
     background-color: #869b93;
     border-radius: 10px;    
 }
