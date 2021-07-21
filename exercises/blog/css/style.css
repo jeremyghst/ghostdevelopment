@@ -15,6 +15,10 @@ body{
     font-size: 16px;
     position: relative;
 }
+    body.visibleModal{
+        max-height: 100vh;
+        overflow: hidden;
+    }
 
 #updateForm, #postForm, article{
     background-color: #EFF7FF;

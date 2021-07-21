@@ -52,20 +52,21 @@ function search(){
 }
 
 function toggleModal(){
+    modal.classList.toggle('visible');
+    document.getElementsByTagName("body")[0].classList.toggle('visibleModal');
+
     allMessages.forEach(oneMessage => {
         if(oneMessage.id == this.value){
-
+            window.scrollTo(0,0);
             const id = oneMessage.id;
             const title = oneMessage.title;
             const message = oneMessage.message;
             
-            modal.classList.toggle('visible');
             document.getElementById("updateBtn").value = id;
             document.getElementById("messageTitleModal").value = title;
             document.getElementById("messageModal").value = message;
             return false;
         } else {
-            modal.classList.toggle('visible');
             return false;
         }
     })

@@ -69,6 +69,7 @@ class Message{
         this.message = message.value;
 
         modal.classList.toggle('visible');
+        document.getElementsByTagName("body")[0].classList.toggle('visibleModal');
 
         this.display(allMessages)
     }
