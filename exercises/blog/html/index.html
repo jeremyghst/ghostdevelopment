@@ -34,7 +34,22 @@
         <h1>Messages:</h1>
         <div id="postArticle"></div>
     </article>
-    <script src="../js/app.js"></script>
+
+    <aside id="modal">
+        <form id="updateForm">
+            <button id="closeBtn" type="reset">X</button>
+            <div class="formItem">
+                <label for="messageTitleModal">Title:</label>
+                <input type="text" name="title" id="messageTitleModal">
+            </div>
+            <div class="formItem">
+                <label for="messageModal">Message:</label>
+                <textarea id="messageModal" name="message" cols="30" rows="10"></textarea>
+            </div>
+            <button id="updateBtn" type="reset">update message</button>
+        </form>
+    </aside>
     <script src="../js/class.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

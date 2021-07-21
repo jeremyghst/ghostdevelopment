@@ -13,9 +13,10 @@ body{
     justify-content: space-around;
     padding: 50px;
     font-size: 16px;
+    position: relative;
 }
 
-#postForm, article{
+#updateForm, #postForm, article{
     background-color: #EFF7FF;
     padding: 20px 50px;
     border-radius: 10px;
@@ -29,7 +30,7 @@ body{
         margin-right: 50px;
     }
 
-    #postForm .formItem, #searchBar .formItem{
+    #postForm .formItem, #searchBar .formItem, #updateForm .formItem{
         display: flex;
         flex-direction: column;
         margin: 10px 0;
@@ -56,7 +57,7 @@ body{
         resize: none;
     }
 
-    #postBtn{
+    #postBtn, #updateBtn{
         display: block;
         padding: 10px;
         border: none;
@@ -65,12 +66,38 @@ body{
         color: #EFF7FF;
         background-color: #558C8C;
     }
-        #postBtn:hover{
+        #postBtn:hover, #updateBtn:hover{
             background-color: #558C8CCC;
         }
-        #postBtn:active{
+        #postBtn:active, #updateBtn:active{
             background-color: #558C8C66;
         }
+
+#modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: #000C;
+}
+    #modal.visible{
+        display: flex;
+        opacity: 1;
+    }
+
+#updateForm{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
 
 #searchBar{
     margin: 15px;
@@ -98,6 +125,8 @@ article .post{
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
+    width: 100%;
+    border: solid 1px grey;
 }
 
     .post h2{
@@ -117,7 +146,7 @@ article .post{
         text-align: right;
     }
 
-    .deleteBtn{
+    .deleteBtn, #closeBtn{
         position: absolute;
         right: 20px;
         background-color: #82204A;
@@ -126,10 +155,10 @@ article .post{
         border: none;
         border-radius: 5px;
     }
-        .deleteBtn:hover{
+        .deleteBtn:hover, #closeBtn:hover{
             background-color: #82204AAA;
         }
-        .deleteBtn:active{
+        .deleteBtn:active, #closeBtn:active{
             background-color: #82204A66;
         }
 

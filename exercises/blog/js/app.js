@@ -1,5 +1,7 @@
 "use strict"
 
+let allMessages = [];
+let i = 0;
 
 const dateP = document.getElementById("dateP");
 const postArticle = document.getElementById("postArticle");
@@ -8,8 +10,17 @@ const posts = document.getElementsByClassName("post");
 const postBtn = document.getElementById("postBtn");
 const searchBarInput = document.getElementById("searchBarInput");
 
+const modal = document.getElementById("modal");
+const messageTitleModal = document.getElementById("messageTitleModal");
+const messageModal = document.getElementById("messageModal");
+
+const closeBtn = document.getElementById("closeBtn");
+const updateBtn = document.getElementById("updateBtn");
+
 postBtn.addEventListener("click", createMessage);
 searchBarInput.addEventListener("input", search);
+closeBtn.addEventListener("click", toggleModal);
+updateBtn.addEventListener("click", updateMessage);
 
 function setDate(){
     const today = new Date();
@@ -21,10 +32,13 @@ function setDate(){
 setInterval(setDate, 1000);
 
 function createMessage(){
-    const message = new Message;
-    message.create();
-
-    return false;
+    if(document.getElementById("messageTitle").value !== "" && document.getElementById("message").value !== ""){
+        const messagePost = new Message;
+        allMessages.push(messagePost.create());
+        messagePost.display(allMessages);
+    } else {
+        return false;
+    }
 }
 
 function search(){
@@ -35,4 +49,36 @@ function search(){
             post.style.display = "block"
         }
     })
+}
+
+function toggleModal(){
+    allMessages.forEach(oneMessage => {
+        if(oneMessage.id == this.value){
+
+            const id = oneMessage.id;
+            const title = oneMessage.title;
+            const message = oneMessage.message;
+            
+            modal.classList.toggle('visible');
+            document.getElementById("updateBtn").value = id;
+            document.getElementById("messageTitleModal").value = title;
+            document.getElementById("messageModal").value = message;
+            return false;
+        } else {
+            modal.classList.toggle('visible');
+            return false;
+        }
+    })
+}
+
+function updateMessage(){
+    if(document.getElementById("messageTitleModal").value !== "" && document.getElementById("messageModal").value !== ""){
+        allMessages.forEach(oneMessage => {
+            if(oneMessage.id == this.value){
+                oneMessage.update()
+            } else {
+                return false;
+            }
+        })
+    }
 }
