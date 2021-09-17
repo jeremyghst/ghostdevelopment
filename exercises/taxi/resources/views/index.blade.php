@@ -22,6 +22,7 @@
                             <td>{{$taxi->location}}</td>
                             <td>{{$taxi->mileage}} <small>miles</small></td>
                             <td>{{$taxi->gas}} <small>gallons</small></td>
+                            <input type="hidden" value="1">
                         </tr>
                     @endforeach
                 </tbody>
