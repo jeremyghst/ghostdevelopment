@@ -24,8 +24,6 @@ function show_section(){
     if(section === 2){
         show_about_section();
     }
-
-    event.stopPropagation();
 }
 show_section();
 
@@ -46,8 +44,6 @@ function show_about_section(){
     highlight_about_navigation();
     //To hightlight the right dot_about_item in #about_nav
     highlight_about_dots();
-
-    event.stopPropagation();
 }
 
 //To highlight the right list_item in #header_nav
