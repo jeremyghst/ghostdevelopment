@@ -1,202 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="/public/css/main.css">
-  <link rel="icon" type="image/png" href="assets/ghost_logo/ghost_logo.png">
-  <title>Ghost developement</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="resources/css/main.css">
+    <script src="js/scroll.js" defer></script>
+    <script src="js/keys.js" defer></script>
+    <script src="js/get_age.js" defer></script>
+    <script src="js/move.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/head_header.js" defer></script>
+    <script src="js/personal.js" defer></script>
+    <script src="js/skills.js" defer></script>
+    <script src="js/studies.js" defer></script>
+    <script src="js/result.js" defer></script>
+    <script src="js/copyright.js" defer></script>
+    <title>Ghost development</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/ghost-min/ghost.svg"/>
 </head>
-
-<body>
-  <nav class="nav">
-    <div class="nav_point">
-      <p class="nav_label">HOME</p>
-    </div>
-    <div class="nav_point">
-      <p class="nav_label">ABOUT</p>
-    </div>
-    <div class="nav_point">
-      <p class="nav_label">PORTFOLIO</p>
-    </div>
-    <div class="nav_point">
-      <p class="nav_label">CONTACT</p>
-    </div>
-  </nav>
-  <nav class="dots" style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </nav>
-
-  <main class="page first_page">
-  </main>
-  <main class="page second_page">
-    <article class="article">
-      <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <h1>PERSONAL</h1>
-          <div class="article_item">
-            <label class="red" for="name">Name:</label>
-            <input name="name" type="text" value="Jeremy Ghost" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="age">Age:</label>
-            <input type="text" id="age" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="location">Location:</label>
-            <input type="text" value="The Netherlands" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="profession">Profession:</label>
-            <span class="landscape">
-              <input type="text" value="Webdeveloper &bull; Trainer IT &bull; Autism peer mentor" readonly>
-            </span>
-            <span class="portrait">
-              <input type="text" value="&bull; Webdeveloper" readonly>
-              <input type="text" value="&bull; Trainer IT" readonly>
-              <input type="text" value="&bull; Autism peer mentor" readonly>
-            </span>
-          </div>
-          <div class="article_item">
-            <label class="red" for="work">Work:</label>
-            <a class="red" href="https://www.spectrummultimedia.nl/">Spectrum Multimedia & IT</a>
-          </div>
-        </div>
-
-        <div id="skillArticle" class="mySlides fade">
-          <h1>SKILLS</h1>
-          <div class="article_item">
-            <label class="red" for="basics">Basics:</label>
-            <input type="text" value="HTML &bull; CSS &bull; SCSS" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="frontend">Frontend:</label>
-            <input type="text" value="Javascript" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="backend">Backend:</label>
-            <input type="text" value="PHP &bull; NodeJS" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="framework">Framework:</label>
-            <input type="text" value="Laravel &bull; ReactJS" readonly>
-          </div>
-        </div>
-
-        <div id="studyArticle" class="mySlides fade">
-          <h1>STUDY</h1>
-          <div class="article_item">
-            <label class="red" for="praktijkopleider">Praktijkopleider PLUS:</label>
-            <input type="text" value="Marlijn Academie" readonly>
-            <input type="text" value="25 &bull; 10 &bull; 2020" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="softwareengineer">Software Engineer Track:</label>
-            <input type="text" value="CapGemini &bull; Spectrum Multimedia & IT" readonly>
-            <input type="text" value="18 &bull; 12 &bull; 2019" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="scrum">Professional Scrum Master 1</label>
-            <input name="scrum" type="text" value="Scrum" readonly>
-            <input type="text" value="15 &bull; 11 &bull; 2019" readonly>
-          </div>
-          <div class="article_item">
-            <label class="red" for="essentials">IT Essentials</label>
-            <input name="essentials" type="text" value="Spectrum Multimedia & IT" readonly>
-            <input type="text" value="25 &bull; 05 &bull; 2019" readonly>
-          </div>
-        </div>
-      </div>
-      <br>
-    </article>
-  </main>
-  <main class="page third_page">
-    <article class="article">
-      <div class="slideshow-container2">
-        <div class="mySlides2 fade2">
-          <h1>PORTFOLIO</h1>
-          <div class="portfolioBtns">
-            <button onclick="currentSlide2(2)"><img src="/assets/ghost_exercises/ghost_exercises.svg"
-                alt="exercises icoon"></button>
-            <button onclick="currentSlide2(3)"><img src="/assets/ghost_project/ghost_project.svg"
-                alt="projects icoon"></button>
-          </div>
-        </div>
-
-        <div id="exercisesArticle" class="mySlides2 fade">
-          <h1 class="backHeading" onclick="currentSlide2(1)">EXERCISES</h1>
-          <div class="article_item">
-            <label class="green" for="typindicator">Typindicator:</label>
-            <input type="text" value="Javascript &bull; CSS Keyframes" readonly>
-            <a class="green" href="/exercises/typindicator/html/index.html" target="_self">Go to typindicator</a>
-          </div>
-          <div class="article_item">
-            <label class="green" for="objectfilter">Object Filter:</label>
-            <input type="text" value="Javascript" readonly>
-            <a class="green" href="/exercises/filter/html/index.html" target="_self">Go to object filter</a>
-          </div>
-          <div class="article_item">
-            <label class="green" for="blog">Blog with searchbar:</label>
-            <input type="text" value="Javascript" readonly>
-            <a class="green" href="/exercises/blog/html/index.html" target="_self">Go to blog with searchbar</a>
-          </div>
-          <div class="article_item">
-            <label class="green" for="calculator">Tic Tac Toe:</label>
-            <input type="text" value="Javascript" readonly>
-            <a class="green" href="/exercises/tictactoe/html/index.html" target="_self">Go to Tic tac toe</a>
-          </div>
-        </div>
-
-        <div id="projectsArticle" class="mySlides2 fade2">
-          <h1 class="backHeading" onclick="currentSlide2(1)">PROJECTS</h1>
-          <div class="article_item">
-            <label class="green" for="trello">Trello JSON to PDF:</label>
-            <input type="text" value="Laravel &bull; Javascript" readonly>
-            <input type="text" value="Private" readonly>
-          </div>
-          <div class="article_item">
-            <label class="green" for="trello">Program Check Tool:</label>
-            <input type="text" value="Laravel &bull; Javascript" readonly>
-            <input type="text" value="Private" readonly>
-          </div>
-          <div class="article_item">
-            <label class="green" for="trello">Client Relationship Management:</label>
-            <input type="text" value="Laravel &bull; Javascript" readonly>
-            <input type="text" value="Private" readonly>
-          </div>
-          <div class="article_item">
-            <label class="green" for="trello">Content Management System:</label>
-            <input type="text" value="Laravel &bull; Javascript" readonly>
-            <a class="green" href="http://bredalala.nl/" target="_blank">bredalala.nl</a>
-          </div>
-        </div>
-    </article>
-  </main>
-  <main class="page fourth_page">
-    <article class="article contact">
-      <h1>CONTACT</h1>
-      <div class="socialMediaBtns">
-        <a href="https://www.facebook.com/jeremy.ghst.5" target="_blank"><img
-            src="/assets/ghost_facebook/ghost_facebook.svg" alt="facebook icoon"></a>
-        <a href="https://www.instagram.com/jeremyghst/" target="_blank"><img
-            src="/assets/ghost_instagram/ghost_instagram.svg" alt="instagram incoon"></a>
-      </div>
-    </article>
-  </main>
-  <footer id="footer">
-    <small id="copyDate">&copy; GHOST DEVELOPMENT </small>
-  </footer>
-  <div class="empty_space"></div>
-  <script src="/javascript/scroll.js"></script>
-  <script src="/javascript/slider.js"></script>
-  <script src="javascript/age.js"></script>
-  <script src="javascript/copyright.js"></script>
+<body id="body" class="home">
+    <header id="header">
+           <h1 id="head_header" class="content home"> 
+                <img id="logo" src="assets/tag/tag.svg" alt="">
+            </h1>
+        <nav id="header_nav" class="header_nav">
+            <ul>
+                <li class="list_item navigation_item" id="list_item_1" data-section="1">HOME</li>
+                <li class="list_item navigation_item" id="list_item_2" data-section="2">ABOUT</li>
+                <li class="list_item navigation_item" id="list_item_3" data-section="3">PORTFOLIO</li>
+                <li class="list_item navigation_item" id="list_item_4" data-section="4">CONTACT</li>
+            </ul>
+        </nav>
+    </header>
+    <aside id="aside" class="home">
+        <nav id="aside_nav">
+            <div class="dot_item navigation_item dot" id="dot_1" data-section="1"></div>
+            <div class="dot_item navigation_item dot" id="dot_2" data-section="2"></div>
+            <div class="dot_item navigation_item dot" id="dot_3" data-section="3"></div>
+            <div class="dot_item navigation_item dot" id="dot_4" data-section="4"></div>
+        </nav>
+    </aside>
+    <main id="main" class="home">
+            <article id="article_1" class="article">
+            </article>
+            <article id="article_2" class="article">
+                <div id="about_container" class="content">
+                    <header id="about_header">
+                        <nav id="about_header_nav" class="header_nav">
+                            <ul>
+                                <li class="list_about_items" id="list_about_item_1" data-section="1">PERSONAL</li>
+                                <li class="list_about_items" id="list_about_item_2" data-section="2">SKILLS</li>
+                                <li class="list_about_items" id="list_about_item_3" data-section="3">STUDIES</li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <div id="about_content"></div>
+                    <aside id="about_aside">
+                        <nav id="about_aside_nav">
+                            <div class="dot_about_item dot" id="about_dot_1" data-section="1"></div>
+                            <div class="dot_about_item dot" id="about_dot_2" data-section="2"></div>
+                            <div class="dot_about_item dot" id="about_dot_3" data-section="3"></div>
+                        </nav>
+                    </aside>
+                </div>
+            </article>
+            <article id="article_3" class="article">
+            </article>
+            <article id="article_4" class="article">
+            </article>
+    </main>
+    <footer id="footer">
+        <h3 id="copyright">&copy; </h3>
+    </footer>
 </body>
-
 </html>

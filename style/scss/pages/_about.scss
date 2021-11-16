@@ -1,0 +1,75 @@
+#about_container{
+    background-image: linear-gradient(to bottom, #000, #000F3D);
+    position: relative;
+    width: 750px;
+    max-width: 90%;
+    height: 550px;
+    max-height: 95%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    #about_content{
+        @include flex(column, flex-start, center);
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+
+        .about_content_container{
+            width: 100%;
+
+            h2{
+                color: $red;
+                font-weight: medium;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .flex_column_div{
+                @include flex(column, flex-start, flex-start);
+                width: 100%;
+                margin-bottom: 25px;
+
+                .flex_row_div{
+                    @include flex(row, flex-start, center);
+                    flex-wrap: wrap;
+                    width: 500px;
+                    max-width: 100%;
+                    margin-bottom: 5px;
+
+                    .text{
+                        font-size: 16px;
+                        color: $light_blue;
+                        transition: 1s;
+
+
+                        &.skills_text{
+                            width: 100px;
+                        }
+
+                        &.study_text{
+                            color: $dark_blue;
+                            transition: 1s;
+                        }
+                    }
+
+                    .bullet{
+                        margin: 0 5px;
+                        color: $red;
+
+                        &:last-child{
+                            display: none;
+                        }
+                    }
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+

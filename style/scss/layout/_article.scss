@@ -1,0 +1,39 @@
+.article{
+	@include flex(row, center, center);
+    background-image: url('../../../assets/ghost/ghost.svg');
+    background-size: 20vw;
+    background-position: top 50px center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 110px);
+    padding-bottom: 50px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+
+
+	&:first-child{
+		background-size: 30vw;
+		background-position: center center;
+		height: calc(100vh - 210px);
+
+		@media all and (orientation: portrait){
+			background-size: 60vw;
+			height: calc(100vh - 125px);
+		}
+	}
+
+	&.selected{
+		opacity: 1;
+		transition: opacity 1s;
+	}
+
+
+	@media all and (orientation: portrait){
+		background-size: 40vw;
+		height: calc(100vh - 60px);
+	}
+}
+
+
+
+

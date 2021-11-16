@@ -1,0 +1,9 @@
+#main{
+    height: calc(100vh - 110px);
+    scroll-behavior: smooth;
+    overflow: hidden;
+
+	&.home{
+		height: calc(100vh - 210px);
+	}
+}
