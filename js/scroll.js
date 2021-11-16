@@ -10,9 +10,17 @@ function scroll_function(){
     }, 200);
 
 
-    if(event.deltaY < 0){
-        move_section('up');
-    } else {
-        move_section('down');
+    if(event.deltaY !== 0){
+        if(event.deltaY < 0){
+            move_section('up');
+        } else {
+            move_section('down');
+        }
+    } else if (section === 2 && event.deltaX !== 0){
+        if(event.deltaX < 0){
+            move_about_dots('right');
+        } else {
+            move_about_dots('left');
+        }
     }
 }
