@@ -28,16 +28,13 @@ function swipe_move(e){
 }
 
 function swipe_end(){
-    console.log(swipe_start_y - swipe_end_y);
-    console.log(swipe_start_x - swipe_end_x);
-
     if(Math.abs(swipe_start_y - swipe_end_y) > 25){
         if(swipe_start_y > swipe_end_y){
             move_section('down');
         } else {
             move_section('up');
         }
-    } else if(swipe_start_x !== swipe_end_x){
+    } else if(section === 2 && swipe_start_x !== swipe_end_x){
         if(swipe_start_x > swipe_end_x){
             move_about_dots('left');
         } else {
