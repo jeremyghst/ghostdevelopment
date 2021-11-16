@@ -27,5 +27,4 @@ function swipe_end(){
             move_section('up');
         }
     }
-    swipe_start_y = swipe_end_y;
 }
