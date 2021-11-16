@@ -36,9 +36,9 @@ function swipe_end(){
         }
     } else if(section === 2 && swipe_start_x !== swipe_end_x){
         if(swipe_start_x > swipe_end_x){
-            move_about_dots('left');
-        } else {
             move_about_dots('right');
+        } else {
+            move_about_dots('left');
         }
     }
 }
