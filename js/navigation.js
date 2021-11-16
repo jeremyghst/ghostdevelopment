@@ -12,10 +12,10 @@ function navigate(e){
     return show_section();
 }
 
-const dot_about_items = Array.from(document.getElementsByClassName('dot_about_item'));
+const navigation_about_item = Array.from(document.getElementsByClassName('navigation_about_item'));
 
-dot_about_items.forEach(dot => {
-    dot.addEventListener('click', about_navigate);
+navigation_about_item.forEach(item => {
+    item.addEventListener('click', about_navigate);
 });
 
 //To show the right sub section in section about when clicking on dot_about_items

@@ -59,6 +59,8 @@ li {
 }
 .dot:hover, .dot:focus {
   opacity: 60%;
+}
+.dot:hover {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
 }
 .dot:active {
@@ -295,11 +297,13 @@ li {
 }
 .header_nav ul li {
   color: #7180B9;
-  font-weight: medium;
+  font-weight: 400;
   transition: 1s;
 }
 .header_nav ul li:hover, .header_nav ul li:focus {
   opacity: 60%;
+}
+.header_nav ul li:hover {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
 }
 .header_nav ul li:active {
@@ -364,7 +368,7 @@ li {
 #footer #copyright {
   color: #7A001F;
   font-size: 18px;
-  font-weight: medium;
+  font-weight: 400;
 }
 
 #about_container {
@@ -391,7 +395,7 @@ li {
 }
 #about_container #about_content .about_content_container h2 {
   color: #7A001F;
-  font-weight: medium;
+  font-weight: 400;
   font-size: 18px;
   margin-bottom: 5px;
 }
