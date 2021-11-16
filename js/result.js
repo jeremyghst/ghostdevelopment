@@ -1,6 +1,6 @@
 "use strict"
 //To show the right section
-function show_section(e){
+function show_section(){
     const articles = Array.from(document.getElementsByClassName('article'));
     const article = document.getElementById("article_" + section);
 
@@ -25,12 +25,12 @@ function show_section(e){
         show_about_section();
     }
 
-    e.stopPropagation();
+    event.stopPropagation();
 }
 show_section();
 
 //To show the right subsection in section about
-function show_about_section(e){
+function show_about_section(){
     switch(about_section){
         case 1:
             setPersonal();
@@ -47,7 +47,7 @@ function show_about_section(e){
     //To hightlight the right dot_about_item in #about_nav
     highlight_about_dots();
 
-    e.stopPropagation();
+    event.stopPropagation();
 }
 
 //To highlight the right list_item in #header_nav
