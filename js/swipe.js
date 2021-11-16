@@ -19,9 +19,9 @@ function swipe_move(e){
 }
 
 function swipe_end(){
-    if(swipe_start_y - swipe_end_y === 10){
+    if(swipe_start_y > swipe_end_y){
         move_section('down');
-    } else if (swipe_start_y - swipe_end_y === -10) {
+    } else {
         move_section('up');
     }
 }
