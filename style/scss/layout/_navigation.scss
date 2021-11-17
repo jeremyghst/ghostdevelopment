@@ -51,11 +51,11 @@
 		@media all and (orientation: portrait){
 			height: 65px;
 			background-color: $light_blue;
-			transition: 1s;
+			transition: 0.5s;
 
 			&.home{
 				background-color: $black;
-				transition: 1s;
+				transition: 0.5s;
 
 				ul li{
 					font-size: 16px;

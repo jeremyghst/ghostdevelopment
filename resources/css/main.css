@@ -297,11 +297,11 @@ li {
   .header_nav#header_nav {
     height: 65px;
     background-color: #7180B9;
-    transition: 1s;
+    transition: 0.5s;
   }
   .header_nav#header_nav.home {
     background-color: #000000;
-    transition: 1s;
+    transition: 0.5s;
   }
   .header_nav#header_nav.home ul li {
     font-size: 16px;
