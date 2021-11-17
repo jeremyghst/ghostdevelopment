@@ -18,12 +18,9 @@ function deviceType(){
         device =  "tablet";
     }
     else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        alert('mobile');
         device =  "mobile";
         isLandscape();
     }
-
-    console.log(device);
 };
 deviceType();
 
@@ -35,7 +32,7 @@ if(device === 'mobile'){
 
 function isLandscape(){
     const  screen_orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-
+    alert(screen_orientation.type);
 
     if(screen_orientation.type === 'landscape-primary'){
             body.appendChild(use_portrait);
