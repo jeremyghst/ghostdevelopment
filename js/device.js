@@ -31,12 +31,8 @@ if(device === 'mobile'){
 }
 
 function isLandscape(){
-    const  screen_orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-    alert('test: '+ screen_orientation.type);
-
-    if(screen_orientation.type === 'landscape-primary'){
-            body.appendChild(use_portrait);
-        return
+    if(window.matchMedia("(orientation: landscape)").matches){
+        body.appendChild(use_portrait);
     } else {
         if(document.getElementsByClassName('use_portrait')[0]){
             body.removeChild(use_portrait);

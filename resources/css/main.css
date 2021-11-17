@@ -10,7 +10,7 @@ html #body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #7A001F;
+  background: #7180B9;
 }
 html #body.home {
   padding-top: 210px;
