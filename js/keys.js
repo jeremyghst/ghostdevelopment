@@ -6,6 +6,8 @@ document.addEventListener('keydown', function(e) {
         case 37:
             if(section === 2){
                 move_about_dots('left');
+            } else if (section === 3){
+                move_portfolio_dots('left');
             }
             break;
         case 38:
@@ -14,6 +16,8 @@ document.addEventListener('keydown', function(e) {
         case 39:
             if(section === 2){
                 move_about_dots('right');
+            } else if (section === 3){
+                move_portfolio_dots('right');
             }
             break;
         case 40:

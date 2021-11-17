@@ -40,5 +40,11 @@ function swipe_end(){
         } else {
             move_about_dots('left');
         }
+    } else if(section === 3 && swipe_start_x !== swipe_end_x){
+        if(swipe_start_x > swipe_end_x){
+            move_portfolio_dots('right');
+        } else {
+            move_portfolio_dots('left');
+        }
     }
 }

@@ -47,3 +47,27 @@ function move_about_dots(dir = null){
 
     return show_about_section();
 }
+
+let portfolio_section = 1;
+
+function move_portfolio_dots(dir = null){
+
+    switch(dir){
+        case 'right':
+            if(portfolio_section !== 2){
+                portfolio_section++
+            } else {
+                portfolio_section = 1;
+            }
+            break;
+        case 'left':
+            if(portfolio_section !== 1){
+                portfolio_section--
+            } else {
+                portfolio_section = 2;
+            }
+            break;
+    }
+
+    return show_portfolio_section();
+}

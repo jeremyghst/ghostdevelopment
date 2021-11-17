@@ -22,5 +22,11 @@ function scroll_function(){
         } else {
             move_about_dots('left');
         }
+    } else if (section === 3 && event.deltaX !== 0){
+        if(event.deltaX < 0){
+            move_portfolio_dots('right');
+        } else {
+            move_portfolio_dots('left');
+        }
     }
 }

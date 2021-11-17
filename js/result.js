@@ -24,6 +24,9 @@ function show_section(){
     if(section === 2){
         show_about_section();
     }
+    if(section ===3){
+        show_portfolio_section();
+    }
 }
 show_section();
 
@@ -44,6 +47,15 @@ function show_about_section(){
     highlight_about_navigation();
     //To hightlight the right dot_about_item in #about_nav
     highlight_about_dots();
+}
+
+function show_portfolio_section(){
+    setPortfolioCase(portfolio_section);
+
+    //To highlight the right list_item in #header_portfolio_nav
+    highlight_portfolio_navigation();
+    //To hightlight the right dot_portfolio_item in #portfolio_nav
+    highlight_portfolio_dots();
 }
 
 //To highlight the right list_item in #header_nav
@@ -92,4 +104,28 @@ function highlight_about_dots(){
     
     const selected_dot_about_item = document.getElementById('about_dot_' + about_section);
     selected_dot_about_item.classList.add('selected')
+}
+
+//To highlight the right list_item in #header_portfolio_nav
+function highlight_portfolio_navigation(){
+    const list_portfolio_items = Array.from(document.getElementsByClassName('list_portfolio_items'));
+
+    list_portfolio_items.forEach(item => {
+        item.classList.remove('selected')
+    });
+    
+    const selected_list_portfolio_items = document.getElementById('list_portfolio_item_' + portfolio_section);
+    selected_list_portfolio_items.classList.add('selected')
+}
+
+//To hightlight the right dot_portfolio_item in #portfolio_nav
+function highlight_portfolio_dots(){
+    const dot_portfolio_items = Array.from(document.getElementsByClassName('dot_portfolio_item'));
+
+    dot_portfolio_items.forEach(dot => {
+        dot.classList.remove('selected')
+    });
+    
+    const selected_dot_portfolio_item = document.getElementById('portfolio_dot_' + portfolio_section);
+    selected_dot_portfolio_item.classList.add('selected')
 }

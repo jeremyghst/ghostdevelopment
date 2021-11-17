@@ -44,14 +44,14 @@ li {
   margin: 60px 0;
   transition: background-color 1s;
 }
-.dot.dot_about_item {
+.dot.dot_about_item, .dot.dot_portfolio_item {
   background-color: #7180B9;
   width: 15px;
   height: 15px;
   margin: 0 30px;
 }
 @media all and (orientation: portrait) {
-  .dot.dot_about_item {
+  .dot.dot_about_item, .dot.dot_portfolio_item {
     width: 10px;
     height: 10px;
     margin: 0 15px;
@@ -208,7 +208,7 @@ li {
   }
 }
 
-#about_aside {
+#about_aside, #portfolio_aside {
   position: absolute;
   top: unset;
   bottom: 20px;
@@ -330,10 +330,10 @@ li {
     font-size: 16px;
   }
 }
-.header_nav#about_header_nav ul {
+.header_nav#about_header_nav ul, .header_nav#portfolio_header_nav ul {
   margin: 20px auto;
 }
-.header_nav#about_header_nav ul li {
+.header_nav#about_header_nav ul li, .header_nav#portfolio_header_nav ul li {
   margin: 0 10px;
   font-size: 16px;
 }
@@ -342,12 +342,13 @@ li {
   margin: auto 0;
 }
 
-#about_aside_nav {
+#about_aside_nav, #portfolio_aside_nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 #footer {
@@ -366,7 +367,7 @@ li {
   font-weight: 400;
 }
 
-#about_container {
+#about_container, #portfolio_container {
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: relative;
   width: 750px;
@@ -376,7 +377,7 @@ li {
   border-radius: 5px;
   overflow: hidden;
 }
-#about_container #about_content {
+#about_container #about_content, #about_container #portfolio_content, #portfolio_container #about_content, #portfolio_container #portfolio_content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -385,21 +386,21 @@ li {
   height: 100%;
   width: 100%;
 }
-#about_container #about_content .about_content_container {
+#about_container #about_content .about_content_container, #about_container #about_content .portfolio_content_container, #about_container #portfolio_content .about_content_container, #about_container #portfolio_content .portfolio_content_container, #portfolio_container #about_content .about_content_container, #portfolio_container #about_content .portfolio_content_container, #portfolio_container #portfolio_content .about_content_container, #portfolio_container #portfolio_content .portfolio_content_container {
   width: 100%;
 }
-#about_container #about_content .about_content_container h2 {
+#about_container #about_content .about_content_container h2, #about_container #about_content .portfolio_content_container h2, #about_container #portfolio_content .about_content_container h2, #about_container #portfolio_content .portfolio_content_container h2, #portfolio_container #about_content .about_content_container h2, #portfolio_container #about_content .portfolio_content_container h2, #portfolio_container #portfolio_content .about_content_container h2, #portfolio_container #portfolio_content .portfolio_content_container h2 {
   color: #7A001F;
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 5px;
 }
 @media all and (orientation: portrait) {
-  #about_container #about_content .about_content_container h2 {
+  #about_container #about_content .about_content_container h2, #about_container #about_content .portfolio_content_container h2, #about_container #portfolio_content .about_content_container h2, #about_container #portfolio_content .portfolio_content_container h2, #portfolio_container #about_content .about_content_container h2, #portfolio_container #about_content .portfolio_content_container h2, #portfolio_container #portfolio_content .about_content_container h2, #portfolio_container #portfolio_content .portfolio_content_container h2 {
     margin-bottom: 0;
   }
 }
-#about_container #about_content .about_content_container .flex_column_div {
+#about_container #about_content .about_content_container .flex_column_div, #about_container #about_content .portfolio_content_container .flex_column_div, #about_container #portfolio_content .about_content_container .flex_column_div, #about_container #portfolio_content .portfolio_content_container .flex_column_div, #portfolio_container #about_content .about_content_container .flex_column_div, #portfolio_container #about_content .portfolio_content_container .flex_column_div, #portfolio_container #portfolio_content .about_content_container .flex_column_div, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -407,7 +408,7 @@ li {
   width: 100%;
   margin-bottom: 25px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -417,28 +418,34 @@ li {
   max-width: 100%;
   margin-bottom: 5px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text {
   font-size: 16px;
   color: #7180B9;
   transition: 1s;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text {
   width: 100px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text {
   color: #000F3D;
   transition: 1s;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet {
   margin: 0 5px;
   color: #7A001F;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child {
   display: none;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div:last-child {
   margin-bottom: 0;
 }
-#about_container #about_content .about_content_container .flex_column_div:last-child {
+#about_container #about_content .about_content_container .flex_column_div:last-child, #about_container #about_content .portfolio_content_container .flex_column_div:last-child, #about_container #portfolio_content .about_content_container .flex_column_div:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div:last-child, #portfolio_container #about_content .about_content_container .flex_column_div:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div:last-child {
   margin-bottom: 0;
+}
+
+.porftolio_div .porfolio_img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=main.css.map */
