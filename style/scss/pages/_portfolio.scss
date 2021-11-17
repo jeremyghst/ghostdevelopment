@@ -1,7 +1,34 @@
 .porftolio_div{
-    .porfolio_img{
-        width: 100%;
+    .portfolio_img_div{
+        position: relative;
         border-radius: 5px;
         margin-bottom: 20px;
+        overflow: hidden;
+
+        .portfolio_img_control{
+            @include flex(row, space-around, center);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $light_blue;
+            opacity: 60%;
+            z-index: -99;
+        }
+        .porfolio_img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &:hover{
+        .portfolio_img_control{
+            z-index: 99;
+
+            .control_button{
+                @include flex(row, center, center);
+                height: 50px;
+                width: 50px;
+            }
+        }
     }
 }

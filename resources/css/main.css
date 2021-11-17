@@ -444,8 +444,36 @@ li {
   margin-bottom: 0;
 }
 
-.porftolio_div .porfolio_img {
-  width: 100%;
+.porftolio_div .portfolio_img_div {
+  position: relative;
   border-radius: 5px;
   margin-bottom: 20px;
+  overflow: hidden;
+}
+.porftolio_div .portfolio_img_div .portfolio_img_control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #7180B9;
+  opacity: 60%;
+  z-index: -99;
+}
+.porftolio_div .portfolio_img_div .porfolio_img {
+  height: 100%;
+  width: 100%;
+}
+.porftolio_div:hover .portfolio_img_control {
+  z-index: 99;
+}
+.porftolio_div:hover .portfolio_img_control .control_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
 }/*# sourceMappingURL=main.css.map */
