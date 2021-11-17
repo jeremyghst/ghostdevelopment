@@ -56,6 +56,10 @@
 			&.home{
 				background-color: $black;
 				transition: 1s;
+
+				ul li{
+					font-size: 16px;
+				}
 			}
 		}
 	}

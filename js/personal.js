@@ -29,21 +29,6 @@ function setPersonal(){
     const personal_container = document.createElement('div');
     personal_container.classList.add('about_content_container', 'personal_container');
     
-    const div = document.createElement('div');
-    div.classList.add('image_container');
-
-    const imag_div = document.createElement('div');
-    imag_div.classList.add('image_div');
-
-    const image = document.createElement('img');
-    image.classList.add('image_profile')
-    image.src = "assets/ghost-min-light-blue/ghost.svg";
-
-    imag_div.appendChild(image);
-    div.appendChild(imag_div);
-
-    personal_container.appendChild(div);
-
     for (const info in personal_info){
         const info_div = document.createElement('div');
         info_div.classList.add('info_div', 'flex_column_div');
