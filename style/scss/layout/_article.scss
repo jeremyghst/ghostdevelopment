@@ -1,9 +1,5 @@
 .article{
 	@include flex(row, center, center);
-    background-image: url('../../../assets/ghost/ghost.svg');
-    background-size: 20vw;
-    background-position: top 50px center;
-    background-repeat: no-repeat;
     height: calc(100vh - 110px);
     padding-bottom: 50px;
     overflow: hidden;
@@ -12,6 +8,8 @@
 
 
 	&:first-child{
+		background-image: url('../../../assets/ghost/ghost.svg');
+		background-repeat: no-repeat;
 		background-size: 30vw;
 		background-position: center center;
 		height: calc(100vh - 210px);
@@ -29,7 +27,6 @@
 
 
 	@media all and (orientation: portrait){
-		background-size: 40vw;
 		height: calc(100vh - 60px);
 	}
 }

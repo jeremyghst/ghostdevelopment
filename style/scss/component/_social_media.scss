@@ -1,0 +1,25 @@
+#social_media{
+    @include flex(row, center, center);
+    height: 100%;
+    width: 100%;
+
+    img{
+        width: 200px;
+        height: 200px;
+        margin: 0 20px;
+
+
+        &:hover, &:focus{
+            opacity: 60%;
+        }
+
+        &:hover{
+            animation: $shake;
+        }
+        
+        @media all and (orientation: portrait){
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

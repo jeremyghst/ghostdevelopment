@@ -114,15 +114,37 @@ li {
     transform: translate3d(4px, 0, 0);
   }
 }
+#social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#social_media img {
+  width: 200px;
+  height: 200px;
+  margin: 0 20px;
+}
+#social_media img:hover, #social_media img:focus {
+  opacity: 60%;
+}
+#social_media img:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+}
+@media all and (orientation: portrait) {
+  #social_media img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .article {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: url("../../../assets/ghost/ghost.svg");
-  background-size: 20vw;
-  background-position: top 50px center;
-  background-repeat: no-repeat;
   height: calc(100vh - 110px);
   padding-bottom: 50px;
   overflow: hidden;
@@ -130,6 +152,8 @@ li {
   transition: opacity 1s;
 }
 .article:first-child {
+  background-image: url("../../../assets/ghost/ghost.svg");
+  background-repeat: no-repeat;
   background-size: 30vw;
   background-position: center center;
   height: calc(100vh - 210px);
@@ -146,7 +170,6 @@ li {
 }
 @media all and (orientation: portrait) {
   .article {
-    background-size: 40vw;
     height: calc(100vh - 60px);
   }
 }
