@@ -40,20 +40,53 @@ function setPersonal(){
         p_div.classList.add('flex_row_div');
 
         for (const info_part in personal_info[info]){
-            const p_part = document.createElement('p');
-            p_part.classList.add('text');
-            p_part.innerText =  personal_info[info][info_part];
+            if(info !== 'profession'){
+                const p_part = document.createElement('p');
 
-            const p_bullet = document.createElement('p');
-            p_bullet.classList.add('bullet');
-            p_bullet.innerHTML = "&#8226;";
-            
-            p_div.append(p_part, p_bullet);
+                p_part.classList.add('text');
+                p_part.innerText =  personal_info[info][info_part];
+
+
+                const p_bullet = document.createElement('p');
+                p_bullet.classList.add('bullet');
+                p_bullet.innerHTML = "&#8226;";
+                
+                p_div.append(p_part, p_bullet);
+            }
         }
         
+        if(info === 'profession'){
+            p_div.id = "profession_div";
+            const p_part = document.createElement('p');
+            p_part.classList.add('text');
+            p_part.innerText =  personal_info[info].first;
+
+            p_div.appendChild(p_part);
+
+            setProfession(p_part);
+        }
 
         info_div.append(label, p_div);
         personal_container.appendChild(info_div);
     }
     about_content.appendChild(personal_container);
+}
+
+function setProfession(text_container){
+    const index = ['first', 'second', 'third']
+    let i = 1;
+
+    const profession_timer = setInterval(function(){
+        text_container.innerText = personal_info.profession[index[i]];
+
+        if(i === 2){
+            i = 0;
+        } else {
+            i++
+        }
+    }, 1000);
+
+    if(section !== 2){
+        clearInterval(profession_timer);
+    }
 }
