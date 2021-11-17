@@ -32,7 +32,7 @@ if(device === 'mobile'){
 
 function isLandscape(){
     const  screen_orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-    alert('test', screen_orientation.type);
+    alert('test: '+ screen_orientation.type);
 
     if(screen_orientation.type === 'landscape-primary'){
             body.appendChild(use_portrait);
