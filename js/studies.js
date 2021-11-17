@@ -4,7 +4,7 @@ const studies = [
     {
         'title': 'it essentials',
         'by': {
-            'organisation': 'spectrum multimedia & it'
+            'organisation': 'Spectrum multimedia & it'
         },
         'date':{
             'day': '25',
@@ -15,7 +15,7 @@ const studies = [
     { 
         'title': 'professional scrum master 1',
         'by':{
-            'organisation': 'scrum'
+            'organisation': 'Scrum'
         },
         'date':{
             'day': '15',
@@ -26,8 +26,8 @@ const studies = [
     {
         'title': 'software enginering track',
         'by': {
-            'organisation1': 'capgemini',
-            'organisation2': 'spectrum multimedia & it'
+            'organisation1': 'Capgemini',
+            'organisation2': 'Spectrum multimedia & it'
         },
         'date': {
             'day': '18',
@@ -38,7 +38,7 @@ const studies = [
     {  
         'title': 'praktijkopleider plus',
         'by':{
-            'organisation': 'marlijn academie'
+            'organisation': 'Marlijn academie'
         },
         'date': {
             'day': '25',

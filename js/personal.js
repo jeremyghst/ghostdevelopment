@@ -6,12 +6,12 @@ const personal_info = {
         'lastname': 'Ghost'
         },
     'age': {
-        'years': `${getYears()} years`,
-        'months': `${getMonths()} months`,
-        'days': `${getDays()} days`
+        'years': getYears(),
+        'months': getMonths(),
+        'days': getDays()
     },
     'location': {
-        'country': 'the netherlands'
+        'country': 'the Netherlands'
     },
     'profession': {
         'first': 'webdeveloper',
@@ -19,7 +19,7 @@ const personal_info = {
         'third': 'autisme peer coach'
         },
     'work': {
-        'work': 'spectrum multimedia & it'
+        'work': 'Spectrum multimedia & it'
     } 
 }
 
@@ -40,7 +40,7 @@ function setPersonal(){
         p_div.classList.add('flex_row_div');
 
         for (const info_part in personal_info[info]){
-            if(info !== 'profession'){
+            if(info !== 'profession' && info !== 'age'){
                 const p_part = document.createElement('p');
 
                 p_part.classList.add('text');
@@ -56,7 +56,6 @@ function setPersonal(){
         }
         
         if(info === 'profession'){
-            p_div.id = "profession_div";
             const p_part = document.createElement('p');
             p_part.classList.add('text');
             p_part.innerText =  personal_info[info].first;
@@ -64,6 +63,27 @@ function setPersonal(){
             p_div.appendChild(p_part);
 
             setProfession(p_part);
+        } else if (info === 'age'){
+            const p_year = document.createElement('p');
+            p_year.classList.add('text');
+
+            const p_bullet1 = document.createElement('p');
+            p_bullet1.classList.add('bullet');
+            p_bullet1.innerHTML = "&#8226;";
+
+            const p_month = document.createElement('p');
+            p_month.classList.add('text');
+
+            const p_bullet2 = document.createElement('p');
+            p_bullet2.classList.add('bullet');
+            p_bullet2.innerHTML = "&#8226;";
+
+            const p_day = document.createElement('p');
+            p_day.classList.add('text');
+
+            p_div.append(p_year, p_bullet1, p_month, p_bullet2, p_day)
+
+            setAge(p_year, p_month, p_day);
         }
 
         info_div.append(label, p_div);
@@ -89,4 +109,56 @@ function setProfession(text_container){
     if(section !== 2){
         clearInterval(profession_timer);
     }
+}
+
+function setAge(p_year, p_month, p_day){
+    let y = 0;
+    let m = 0;
+    let d= 0;
+
+    const year_timer = setInterval(function(){
+        p_year.innerText = `${y} years`;
+
+        if(y === personal_info.age.years){
+            clearInterval(year_timer);
+        } else {
+            y++;
+        }
+
+    }, (1000/personal_info.age.years));
+
+    const month_timer = setInterval(function(){
+        let month_text = 'months';
+
+        if(m === 1){
+            month_text = 'month';
+        }
+
+        p_month.innerText = `${m} ${month_text}`;
+
+        if(Math.abs(m) === personal_info.age.months){
+            clearInterval(month_timer);
+        } else {
+            m++;
+        }
+
+    }, (1000/personal_info.age.months));
+
+    const day_timer = setInterval(function(){
+
+        let day_text = 'days';
+
+        if(d === 1){
+            day_text = 'day';
+        }
+
+        p_day.innerText = `${d} ${day_text}`;
+
+        if(Math.abs(d) === personal_info.age.days){
+            clearInterval(day_timer);
+        } else {
+            d++;
+        }
+
+    }, (1000/personal_info.age.days));
 }
