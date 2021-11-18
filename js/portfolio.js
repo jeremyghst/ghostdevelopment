@@ -73,6 +73,8 @@ function setPortfolioCase(portfolio_section){
 
         if(full_screen){
             full_screen = false;
+            section = 1;
+            show_section();
         } else {
             full_screen = true;
         }

@@ -38,6 +38,9 @@ function isLandscape(full_screen_div){
     } else {
         if(document.getElementsByClassName('use_portrait')[0]){
             body.removeChild(use_portrait);
+
+            section = 1;
+            show_section();
         }
         if(full_screen){
             full_screen_div.classList.add('mobile');
