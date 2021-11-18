@@ -2,59 +2,39 @@
 
 const portfolio = [
     {
+        'languague': [
+            'laravel',
+            'javascript'
+        ],
         'section': [
             {
                 'image': '/assets/portfolio/crm/1.png',
-                'text': [
-                    'Inlogscherm',
-                    'Onderscheid admin en client',
-                    'Wachtwoord onthouden'
-                ]
+                'section_title': 'inlogscherm'
             },
             {
                 'image': '/assets/portfolio/crm/2.png',
-                'text': [
-                    'Clienten inzien',
-                    'Clienten aanmaken & aanpassen',
-                    'Clienten archiveren & verwijderen'
-                ]
+                'section_title': 'clienten archiveren & verwijderen'
             },
             {
                 'image': '/assets/portfolio/crm/3.png',
-                'text': [
-                    'Dagboek inzien',
-                    'Dagboek pdf downloaden',
-                    'Uitklokken'
-                ]
+                'section_title':'dagboek inzien'
             },
         ]
     },
     {
+        'languague': [
+            'laravel',
+            'javascript'
+        ],
         'section': [
             {
-                'image': '/assets/portfolio/crm/1.png',
-                'text': [
-                    'Traject beginnen',
-                    'Vragen beantwoorden',
-                    'Dynamische lijst doorlopen'
-                ]
+                'image': '/assets/portfolio/traject/1.png',
+                'section_title':'begin traject'
             },
             {
-                'image': '/assets/portfolio/crm/2.png',
-                'text': [
-                    'Aanmelding invullen',
-                    'Aanmelding downloaden',
-                    'Aanmelding opslaan'
-                ]
-            },
-            {
-                'image': '/assets/portfolio/crm/3.png',
-                'text': [
-                    'Gegevens controleren',
-                    'Akkoord geven',
-                    'Inschrijven'
-                ]
-            },
+                'image': '/assets/portfolio/traject/2.png',
+                'section_title':'traject vragen'
+            }
         ]
     }
 ]
@@ -62,7 +42,20 @@ const portfolio = [
 const portfolio_content = document.getElementById('portfolio_content');
 let portfolio_case;
 
+let full_screen = false;
+
+let control_play;
+let control_pause;
+let control_left;
+let control_right;
+
+//Initialize portfolio slider
 function setPortfolioCase(portfolio_section){
+    if(is_portfolio_loop){
+        pausePortfolioTimer()
+    }
+    portfolio_i = 0;
+    
     portfolio_content.innerHTML = ""
 
     const portfolio_content_container = document.createElement('div');
@@ -75,50 +68,44 @@ function setPortfolioCase(portfolio_section){
 
     const portfolio_img_div = document.createElement('div');
     portfolio_img_div.classList.add('portfolio_img_div');
+    portfolio_img_div.addEventListener('dblclick', function(e){
+        this.classList.toggle('full_screen');
+
+        if(full_screen){
+            full_screen = false;
+        } else {
+            full_screen = true;
+        }
+
+        deviceType(this);
+    })
 
     const portfolio_img_control = document.createElement('div');
     portfolio_img_control.classList.add('portfolio_img_control');
 
-    const control_left = document.createElement('button');
+    control_left = document.createElement('button');
     control_left.classList.add('control_button');
     control_left.innerText = 'left';
-    control_left.style.display = 'none';
     
     control_left.addEventListener('click', function(){
         setPortfolio(-1);
     })
 
-    const control_pause = document.createElement('button');
+    control_pause = document.createElement('button');
     control_pause.classList.add('control_button', 'control_pause');
     control_pause.innerText = 'pause';
 
-    control_pause.addEventListener('click', function(){
-        control_play.style.display = 'flex';
-        control_left.style.display = 'flex';
-        control_right.style.display = 'flex';
-        control_pause.style.display = 'none';
-        
-        clearInterval(portfolio_loop);
-    })
+    control_pause.addEventListener('click', pausePortfolioTimer)
 
-    const control_play = document.createElement('button');
+    control_play = document.createElement('button');
     control_play.classList.add('control_button', 'control_play');
     control_play.innerText = 'play';
     control_play.style.display = 'none';
+    control_play.addEventListener('click', startPortfolioTimer);
 
-    control_play.addEventListener('click', function(){
-        control_pause.style.display = 'flex';
-        control_play.style.display = 'none';
-        control_left.style.display = 'none';
-        control_right.style.display = 'none';
-
-        setPortfolioTimer();
-    })
-
-    const control_right = document.createElement('button');
+    control_right = document.createElement('button');
     control_right.classList.add('control_button');
     control_right.innerText = 'right';
-    control_right.style.display = 'none';
 
     control_right.addEventListener('click', function(){
         setPortfolio(1);
@@ -134,21 +121,32 @@ function setPortfolioCase(portfolio_section){
 
     porftolio_div.appendChild(portfolio_img_div);
 
-    portfolio_case.section[0].text.forEach(text => {
-        const p_text_div = document.createElement('div');
-        p_text_div.classList.add('flex_row_div');
-
+    const section_lang_div = document.createElement('div');
+    section_lang_div.classList.add('flex_row_div', 'section_lang_div');
+    
+    portfolio_case.languague.forEach(lang => {
+        const section_lang = document.createElement('p');
+        section_lang.classList.add('text', 'section_lang');
+        section_lang.innerText = lang;
+    
         const p_bullet = document.createElement('p');
         p_bullet.classList.add('bullet');
         p_bullet.innerHTML = "&#8226;";
-                
-        const portfolio_text = document.createElement('p');
-        portfolio_text.classList.add('text', 'portfolio_text');
-        portfolio_text.innerText = text;
 
-        p_text_div.append(p_bullet, portfolio_text);
-        porftolio_div.appendChild(p_text_div);
+        section_lang_div.append(section_lang, p_bullet);
     })
+
+
+    const section_title_div = document.createElement('div');
+    section_title_div.classList.add('flex_row_div');
+            
+    const section_title = document.createElement('p');
+    section_title.classList.add('text', 'section_title');
+    section_title.innerText =  portfolio_case.section[0].section_title;
+
+    section_title_div.appendChild(section_title);
+
+    porftolio_div.append(section_lang_div, section_title_div);
     portfolio_content_container.appendChild(porftolio_div);
     portfolio_content.appendChild(portfolio_content_container);
 
@@ -156,8 +154,10 @@ function setPortfolioCase(portfolio_section){
 }
 
 let portfolio_loop;
+let is_portfolio_loop = false;
 let portfolio_i;
 
+//Set portfolio section timer
 function setPortfolioTimer(dir = null){
     if(portfolio_i){
         portfolio_i = portfolio_i;
@@ -167,46 +167,78 @@ function setPortfolioTimer(dir = null){
 
     if(dir){
         portfolio_i += dir;
-        console.log(portfolio_i);
     }
 
     const porfolio_img = document.getElementsByClassName('porfolio_img')[0];
-    const porfolio_text = Array.from(document.getElementsByClassName('portfolio_text'));
+    const section_title = document.getElementsByClassName('section_title')[0];
 
     portfolio_loop = setInterval(function(){
+        console.log(portfolio_i);
         porfolio_img.src = portfolio_case.section[portfolio_i].image;
+        section_title.innerText = portfolio_case.section[portfolio_i].section_title;
 
-        for(let j = 0; j < portfolio_case.section[portfolio_i].text.length; j++){
-            porfolio_text[j].innerText = portfolio_case.section[portfolio_i].text[j];
-        }
-
-        if(portfolio_i === 2){
+        if(portfolio_i >= portfolio_case.section.length - 1){
             portfolio_i = 0;
         } else {
             portfolio_i++
         }
     }, 2000);
 
+    is_portfolio_loop = true;
+
     if(section !== 3){
         clearInterval(portfolio_loop);
+        is_portfolio_loop = false;
     }
 }
 
+function startPortfolioTimer(){
+    control_pause.style.display = 'flex';
+    control_play.style.display = 'none';
+
+    setPortfolioTimer();
+}
+
+//pause portfolio section timer
+function pausePortfolioTimer(){
+    control_pause.style.display = 'none';
+    control_play.style.display = 'flex';
+    
+    clearInterval(portfolio_loop);
+    is_portfolio_loop = false;
+}
+
+//set portfolio section manually
 function setPortfolio(dir){
+    if(is_portfolio_loop){
+        pausePortfolioTimer()
+    }
+
     portfolio_i += dir;
 
-    if(portfolio_i === 3){
+    if(portfolio_i >= portfolio_case.section.length){
         portfolio_i = 0;
     } else if (portfolio_i === -1){
-        portfolio_i = 2;
+        portfolio_i = portfolio_case.section.length - 1;
     }
 
     const porfolio_img = document.getElementsByClassName('porfolio_img')[0];
-    const porfolio_text = Array.from(document.getElementsByClassName('portfolio_text'));
+    const section_lang_div = document.getElementsByClassName('section_lang_div')[0];
+    const section_title = document.getElementsByClassName('section_title')[0];
 
     porfolio_img.src = portfolio_case.section[portfolio_i].image;
+    section_title.innerText = portfolio_case.section[portfolio_i].section_title;
 
-    for(let j = 0; j < portfolio_case.section[portfolio_i].text.length; j++){
-        porfolio_text[j].innerText = portfolio_case.section[portfolio_i].text[j];
-    }
+    section_lang_div.innerHTML = "";
+    portfolio_case.languague.forEach(lang => {
+        const section_lang = document.createElement('p');
+        section_lang.classList.add('text', 'section_lang');
+        section_lang.innerText = lang;
+    
+        const p_bullet = document.createElement('p');
+        p_bullet.classList.add('bullet');
+        p_bullet.innerHTML = "&#8226;";
+
+        section_lang_div.append(section_lang, p_bullet);
+    });
 }

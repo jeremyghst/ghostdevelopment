@@ -484,17 +484,59 @@ li {
   height: 100%;
   width: 100%;
   background-color: #7180B9;
-  opacity: 60%;
+  opacity: 0%;
   z-index: -99;
+  transition: opacity 0.5s;
 }
 .porftolio_div .portfolio_img_div .porfolio_img {
   height: 100%;
   width: 100%;
 }
-.porftolio_div:hover .portfolio_img_control {
-  z-index: 99;
+.porftolio_div .portfolio_img_div.full_screen {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  border-radius: 0;
+  z-index: 999999;
+  background-image: linear-gradient(to bottom, #000, #000F3D);
 }
-.porftolio_div:hover .portfolio_img_control .control_button {
+.porftolio_div .portfolio_img_div.full_screen .portfolio_img_control {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.porftolio_div .portfolio_img_div.full_screen .portfolio_img_control .porfolio_img {
+  height: 100%;
+  max-height: 600px;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 5px;
+}
+@media all and (orientation: portrait) {
+  .porftolio_div .portfolio_img_div.full_screen.mobile {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    top: 100%;
+    left: 0;
+  }
+}
+.porftolio_div:hover .portfolio_img_control, .porftolio_div:focus .portfolio_img_control {
+  opacity: 60%;
+  z-index: 99;
+  transition: 0.5s;
+}
+.porftolio_div:hover .portfolio_img_control .control_button, .porftolio_div:focus .portfolio_img_control .control_button {
   display: flex;
   flex-direction: row;
   justify-content: center;

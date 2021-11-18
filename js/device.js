@@ -10,7 +10,7 @@ use_portrait_img.classList.add('use_portrait_img');
 
 use_portrait.appendChild(use_portrait_img);
 
-function deviceType(){
+function deviceType(full_screen = null){
     const ua = navigator.userAgent;
     device = 'desktop';
     
@@ -19,7 +19,7 @@ function deviceType(){
     }
     else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
         device =  "mobile";
-        isLandscape();
+        isLandscape(full_screen);
     }
 };
 deviceType();
@@ -30,12 +30,17 @@ if(device === 'mobile'){
     });
 }
 
-function isLandscape(){
+function isLandscape(full_screen_div){
     if(window.matchMedia("(orientation: landscape)").matches){
-        body.appendChild(use_portrait);
+        if(!full_screen){
+            body.appendChild(use_portrait);
+        }
     } else {
         if(document.getElementsByClassName('use_portrait')[0]){
             body.removeChild(use_portrait);
+        }
+        if(full_screen){
+            full_screen_div.classList.add('mobile');
         }
     }
     
