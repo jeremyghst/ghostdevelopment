@@ -83,31 +83,44 @@ function setPortfolioCase(portfolio_section){
 
     control_left = document.createElement('button');
     control_left.classList.add('control_button');
-    control_left.innerText = 'left';
+    
+    const control_left_i = document.createElement('i');
+    control_left_i.classList.add('fas', 'fa-backward');
     
     control_left.addEventListener('click', function(){
         setPortfolio(-1);
     })
+    control_left.appendChild(control_left_i);
 
     control_pause = document.createElement('button');
     control_pause.classList.add('control_button', 'control_pause');
-    control_pause.innerText = 'pause';
+    
+    const control_pause_i = document.createElement('i');
+    control_pause_i.classList.add('fas', 'fa-pause');
 
     control_pause.addEventListener('click', pausePortfolioTimer)
+    control_pause.appendChild(control_pause_i);
 
     control_play = document.createElement('button');
     control_play.classList.add('control_button', 'control_play');
-    control_play.innerText = 'play';
+    
+    const control_play_i = document.createElement('i');
+    control_play_i.classList.add('fas', 'fa-play');
+
     control_play.style.display = 'none';
     control_play.addEventListener('click', startPortfolioTimer);
+    control_play.appendChild(control_play_i);
 
     control_right = document.createElement('button');
     control_right.classList.add('control_button');
-    control_right.innerText = 'right';
+    
+    const control_right_i = document.createElement('i');
+    control_right_i.classList.add('fas', 'fa-forward');
 
     control_right.addEventListener('click', function(){
         setPortfolio(1);
     })
+    control_right.appendChild(control_right_i);
 
     portfolio_img_control.append(control_left, control_pause, control_play, control_right);
 

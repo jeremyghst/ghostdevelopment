@@ -15,6 +15,23 @@
             z-index: -99;
             transition: opacity 0.5s;
         }
+
+        .control_button{
+            background-color: transparent;
+            border: solid 3px $red;
+            border-radius: 5px;
+            color: $red;
+            font-weight: 400;
+
+            &:hover, &:focus{
+                opacity: 60%;
+                animation: $shake;
+            }
+
+            &:active{
+                opacity: 20%;
+            }
+        }
         .porfolio_img{
             height: auto;
             max-width: 100%;
