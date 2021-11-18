@@ -10,7 +10,7 @@ html #body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #7A001F;
+  background: #7180B9;
 }
 html #body.home {
   padding-top: 210px;
@@ -501,8 +501,8 @@ li {
   right: 0;
   bottom: 0;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding: 50px;
   border-radius: 0;
   z-index: 999999;
@@ -523,9 +523,9 @@ li {
   .porftolio_div .portfolio_img_div.full_screen.mobile {
     transform: rotate(-90deg);
     transform-origin: left top;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
     top: 100%;
     left: 0;
   }
