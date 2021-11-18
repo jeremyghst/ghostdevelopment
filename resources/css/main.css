@@ -491,6 +491,7 @@ li {
 .porftolio_div .portfolio_img_div .porfolio_img {
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 .porftolio_div .portfolio_img_div.full_screen {
   position: fixed;
