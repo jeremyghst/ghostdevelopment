@@ -529,11 +529,11 @@ li {
     top: 100%;
     left: 0;
   }
-  .porftolio_div .portfolio_img_div.full_screen.mobile .porfolio_img {
-    width: auto;
-    max-height: 100%;
-    margin: auto;
-  }
+}
+.porftolio_div .portfolio_img_div.full_screen.mobile .porfolio_img {
+  width: auto;
+  max-height: 100%;
+  margin: auto;
 }
 .porftolio_div:hover .portfolio_img_control, .porftolio_div:focus .portfolio_img_control {
   opacity: 60%;
