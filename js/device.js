@@ -32,7 +32,9 @@ if(device === 'mobile'){
 
 function isLandscape(full_screen_div){
     if(window.matchMedia("(orientation: landscape)").matches){
+        if(!full_screen){
             body.appendChild(use_portrait);
+        }
     } else {
         if(document.getElementsByClassName('use_portrait')[0]){
             body.removeChild(use_portrait);
