@@ -9,16 +9,28 @@ const portfolio = [
         'section': [
             {
                 'image': '/assets/portfolio/crm/1.png',
-                'section_title': 'inlogscherm'
+                'section_title': 'authentication'
             },
             {
                 'image': '/assets/portfolio/crm/2.png',
-                'section_title': 'clienten archiveren & verwijderen'
+                'section_title': 'client managment'
             },
             {
                 'image': '/assets/portfolio/crm/3.png',
-                'section_title':'dagboek inzien'
+                'section_title':'client-diary managment'
             },
+            {
+                'image': '/assets/portfolio/crm/4.png',
+                'section_title':'client-diary managment'
+            },
+            {
+                'image': '/assets/portfolio/crm/5.png',
+                'section_title':'notification system'
+            },
+            {
+                'image': '/assets/portfolio/crm/6.png',
+                'section_title':'chat system'
+            }
         ]
     },
     {
