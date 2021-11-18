@@ -32,22 +32,6 @@ const portfolio = [
                 'section_title':'chat system'
             }
         ]
-    },
-    {
-        'languague': [
-            'laravel',
-            'javascript'
-        ],
-        'section': [
-            {
-                'image': '/assets/portfolio/traject/1.png',
-                'section_title':'begin traject'
-            },
-            {
-                'image': '/assets/portfolio/traject/2.png',
-                'section_title':'traject vragen'
-            }
-        ]
     }
 ]
 
