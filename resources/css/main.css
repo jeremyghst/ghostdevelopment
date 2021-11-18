@@ -10,7 +10,7 @@ html #body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #7180B9;
+  background: #7A001F;
 }
 html #body.home {
   padding-top: 210px;
@@ -530,8 +530,8 @@ li {
     left: 0;
   }
   .porftolio_div .portfolio_img_div.full_screen.mobile .porfolio_img {
-    width: auto;
-    max-height: 100%;
+    height: auto;
+    max-width: 100%;
     margin: auto;
   }
 }
