@@ -489,8 +489,8 @@ li {
   transition: opacity 0.5s;
 }
 .porftolio_div .portfolio_img_div .porfolio_img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
   border-radius: 5px;
 }
 .porftolio_div .portfolio_img_div.full_screen {
@@ -515,10 +515,8 @@ li {
   bottom: 0;
 }
 .porftolio_div .portfolio_img_div.full_screen .portfolio_img_control .porfolio_img {
-  height: 100%;
-  max-height: 600px;
-  width: 100%;
-  max-width: 1000px;
+  height: auto;
+  max-width: 100%;
   border-radius: 5px;
 }
 @media all and (orientation: portrait) {
@@ -530,6 +528,11 @@ li {
     overflow-x: hidden;
     top: 100%;
     left: 0;
+  }
+  .porftolio_div .portfolio_img_div.full_screen.mobile .porfolio_img {
+    width: auto;
+    max-height: 100%;
+    margin: auto;
   }
 }
 .porftolio_div:hover .portfolio_img_control, .porftolio_div:focus .portfolio_img_control {
