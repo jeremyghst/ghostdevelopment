@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Rokkitt&display=swap");
 html {
   width: 100vw;
   height: 100vh;
@@ -46,17 +46,17 @@ li {
   height: 20px;
   background-color: #000000;
   border-radius: 50%;
-  margin: 60px 0;
+  margin: 30px 0;
   transition: background-color 1s;
 }
-.dot.dot_about_item, .dot.dot_portfolio_item {
+.dot.dot_about_item {
   background-color: #7180B9;
   width: 15px;
   height: 15px;
   margin: 0 30px;
 }
 @media all and (orientation: portrait) {
-  .dot.dot_about_item, .dot.dot_portfolio_item {
+  .dot.dot_about_item {
     width: 10px;
     height: 10px;
     margin: 0 15px;
@@ -126,6 +126,7 @@ li {
   align-items: center;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 #social_media img {
   width: 200px;
@@ -179,6 +180,7 @@ li {
 #slogan p {
   margin: 10px;
   font-size: 32px;
+  font-family: "Rokkitt", serif;
   color: #F8F8FD;
   opacity: 60%;
   text-shadow: 0 0 3px #7A001F;
@@ -6503,7 +6505,13 @@ readers do not read off random characters that represent icons */
 }
 
 #aside_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto 0;
+  position: relative;
+  z-index: 999999;
 }
 
 #about_aside_nav, #portfolio_aside_nav {

@@ -88,7 +88,10 @@
 
 
 #aside_nav{
+	@include flex(column, center, center);
 	margin: auto 0;
+	position: relative;
+    z-index: 999999;
 }
 
 #about_aside_nav, #portfolio_aside_nav{
