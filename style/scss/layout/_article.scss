@@ -8,6 +8,7 @@
 
 
 	&:first-child{
+		@include flex(row, flex-start, flex-start);
 		background-image: url('../../../assets/ghost/ghost.svg');
 		background-repeat: no-repeat;
 		background-size: 30vw;

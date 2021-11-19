@@ -166,6 +166,34 @@ li {
   height: 100%;
 }
 
+#slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 1280px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+#slogan p {
+  margin: 10px;
+  font-size: 32px;
+  color: #F8F8FD;
+  opacity: 60%;
+  text-shadow: 0 0 3px #7A001F;
+}
+@media all and (max-width: 400px) {
+  #slogan p {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 300px) {
+  #slogan p {
+    font-size: 16px;
+  }
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6275,6 +6303,10 @@ readers do not read off random characters that represent icons */
   transition: opacity 1s;
 }
 .article:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-image: url("../../../assets/ghost/ghost.svg");
   background-repeat: no-repeat;
   background-size: 30vw;
@@ -6445,11 +6477,18 @@ readers do not read off random characters that represent icons */
     background-color: #7180B9;
     transition: 0.5s;
   }
+  .header_nav#header_nav ul li {
+    display: none;
+  }
+  .header_nav#header_nav ul li.selected {
+    display: block;
+  }
   .header_nav#header_nav.home {
     background-color: #000000;
     transition: 0.5s;
   }
   .header_nav#header_nav.home ul li {
+    display: block;
     font-size: 16px;
   }
 }
@@ -6490,7 +6529,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-#about_container, #portfolio_container {
+#about_container {
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: relative;
   width: 750px;
@@ -6500,7 +6539,7 @@ readers do not read off random characters that represent icons */
   border-radius: 5px;
   overflow: hidden;
 }
-#about_container #about_content, #about_container #portfolio_content, #portfolio_container #about_content, #portfolio_container #portfolio_content {
+#about_container #about_content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6509,21 +6548,21 @@ readers do not read off random characters that represent icons */
   height: 100%;
   width: 100%;
 }
-#about_container #about_content .about_content_container, #about_container #about_content .portfolio_content_container, #about_container #portfolio_content .about_content_container, #about_container #portfolio_content .portfolio_content_container, #portfolio_container #about_content .about_content_container, #portfolio_container #about_content .portfolio_content_container, #portfolio_container #portfolio_content .about_content_container, #portfolio_container #portfolio_content .portfolio_content_container {
+#about_container #about_content .about_content_container {
   width: 100%;
 }
-#about_container #about_content .about_content_container h2, #about_container #about_content .portfolio_content_container h2, #about_container #portfolio_content .about_content_container h2, #about_container #portfolio_content .portfolio_content_container h2, #portfolio_container #about_content .about_content_container h2, #portfolio_container #about_content .portfolio_content_container h2, #portfolio_container #portfolio_content .about_content_container h2, #portfolio_container #portfolio_content .portfolio_content_container h2 {
+#about_container #about_content .about_content_container h2 {
   color: #7A001F;
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 5px;
 }
 @media all and (orientation: portrait) {
-  #about_container #about_content .about_content_container h2, #about_container #about_content .portfolio_content_container h2, #about_container #portfolio_content .about_content_container h2, #about_container #portfolio_content .portfolio_content_container h2, #portfolio_container #about_content .about_content_container h2, #portfolio_container #about_content .portfolio_content_container h2, #portfolio_container #portfolio_content .about_content_container h2, #portfolio_container #portfolio_content .portfolio_content_container h2 {
+  #about_container #about_content .about_content_container h2 {
     margin-bottom: 0;
   }
 }
-#about_container #about_content .about_content_container .flex_column_div, #about_container #about_content .portfolio_content_container .flex_column_div, #about_container #portfolio_content .about_content_container .flex_column_div, #about_container #portfolio_content .portfolio_content_container .flex_column_div, #portfolio_container #about_content .about_content_container .flex_column_div, #portfolio_container #about_content .portfolio_content_container .flex_column_div, #portfolio_container #portfolio_content .about_content_container .flex_column_div, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div {
+#about_container #about_content .about_content_container .flex_column_div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6531,7 +6570,7 @@ readers do not read off random characters that represent icons */
   width: 100%;
   margin-bottom: 25px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -6541,122 +6580,28 @@ readers do not read off random characters that represent icons */
   max-width: 100%;
   margin-bottom: 5px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text {
   font-size: 16px;
   color: #7180B9;
   transition: 1s;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.skills_text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.skills_text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.skills_text {
   width: 100px;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .text.study_text, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .text.study_text {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .text.study_text {
   color: #000F3D;
   transition: 1s;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet {
   margin: 0 5px;
   color: #7A001F;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div .bullet:last-child {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div .bullet:last-child {
   display: none;
 }
-#about_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child, #about_container #about_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #about_container #portfolio_content .about_content_container .flex_column_div .flex_row_div:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div .flex_row_div:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div .flex_row_div:last-child {
+#about_container #about_content .about_content_container .flex_column_div .flex_row_div:last-child {
   margin-bottom: 0;
 }
-#about_container #about_content .about_content_container .flex_column_div:last-child, #about_container #about_content .portfolio_content_container .flex_column_div:last-child, #about_container #portfolio_content .about_content_container .flex_column_div:last-child, #about_container #portfolio_content .portfolio_content_container .flex_column_div:last-child, #portfolio_container #about_content .about_content_container .flex_column_div:last-child, #portfolio_container #about_content .portfolio_content_container .flex_column_div:last-child, #portfolio_container #portfolio_content .about_content_container .flex_column_div:last-child, #portfolio_container #portfolio_content .portfolio_content_container .flex_column_div:last-child {
+#about_container #about_content .about_content_container .flex_column_div:last-child {
   margin-bottom: 0;
-}
-
-.porftolio_div .portfolio_img_div {
-  position: relative;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.porftolio_div .portfolio_img_div .portfolio_img_control {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #7180B9;
-  opacity: 0%;
-  z-index: -99;
-  transition: opacity 0.5s;
-}
-.porftolio_div .portfolio_img_div .control_button {
-  background-color: transparent;
-  border: solid 3px #7A001F;
-  border-radius: 5px;
-  color: #7A001F;
-  font-weight: 400;
-}
-.porftolio_div .portfolio_img_div .control_button:hover, .porftolio_div .portfolio_img_div .control_button:focus {
-  opacity: 60%;
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
-}
-.porftolio_div .portfolio_img_div .control_button:active {
-  opacity: 20%;
-}
-.porftolio_div .portfolio_img_div .porfolio_img {
-  height: auto;
-  max-width: 100%;
-  border-radius: 5px;
-}
-.porftolio_div .portfolio_img_div.full_screen {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  padding: 50px;
-  border-radius: 0;
-  z-index: 999999;
-  background-image: linear-gradient(to bottom, #000, #000F3D);
-}
-.porftolio_div .portfolio_img_div.full_screen .portfolio_img_control {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.porftolio_div .portfolio_img_div.full_screen .portfolio_img_control .porfolio_img {
-  height: auto;
-  max-width: 100%;
-  border-radius: 5px;
-}
-@media all and (orientation: portrait) {
-  .porftolio_div .portfolio_img_div.full_screen.mobile {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    top: 100%;
-    left: 0;
-  }
-}
-.porftolio_div .portfolio_img_div.full_screen.mobile .porfolio_img {
-  width: auto;
-  max-height: 100%;
-  margin: auto;
-}
-.porftolio_div:hover .portfolio_img_control, .porftolio_div:focus .portfolio_img_control {
-  opacity: 60%;
-  z-index: 99;
-  transition: 0.5s;
-}
-.porftolio_div:hover .portfolio_img_control .control_button, .porftolio_div:focus .portfolio_img_control .control_button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
 }/*# sourceMappingURL=main.css.map */

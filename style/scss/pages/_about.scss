@@ -1,4 +1,4 @@
-#about_container, #portfolio_container{
+#about_container{
     background-image: linear-gradient(to bottom, #000, #000F3D);
     position: relative;
     width: 750px;
@@ -8,13 +8,13 @@
     border-radius: 5px;
     overflow: hidden;
 
-    #about_content, #portfolio_content{
+    #about_content{
         @include flex(column, flex-start, center);
         padding: 20px;
         height: 100%;
         width: 100%;
 
-        .about_content_container, .portfolio_content_container{
+        .about_content_container{
             width: 100%;
 
             h2{

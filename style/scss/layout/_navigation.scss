@@ -53,11 +53,19 @@
 			background-color: $light_blue;
 			transition: 0.5s;
 
+			ul li{
+				display: none;
+
+				&.selected{
+					display: block;
+				}
+			}
 			&.home{
 				background-color: $black;
 				transition: 0.5s;
 
 				ul li{
+					display: block;
 					font-size: 16px;
 				}
 			}
