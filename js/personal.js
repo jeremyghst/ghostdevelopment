@@ -40,7 +40,7 @@ function setPersonal(){
         p_div.classList.add('flex_row_div');
 
         for (const info_part in personal_info[info]){
-            if(info !== 'profession' && info !== 'age'){
+            if(info !== 'Profession' && info !== 'Age'){
                 const p_part = document.createElement('p');
 
                 p_part.classList.add('text');
@@ -55,7 +55,7 @@ function setPersonal(){
             }
         }
         
-        if(info === 'profession'){
+        if(info === 'Profession'){
             const p_part = document.createElement('p');
             p_part.classList.add('text');
             p_part.innerText =  personal_info[info].first;
@@ -63,7 +63,7 @@ function setPersonal(){
             p_div.appendChild(p_part);
 
             setProfession(p_part);
-        } else if (info === 'age'){
+        } else if (info === 'Age'){
             const p_year = document.createElement('p');
             p_year.classList.add('text');
 
@@ -97,7 +97,7 @@ function setProfession(text_container){
     let i = 1;
 
     const profession_timer = setInterval(function(){
-        text_container.innerText = personal_info.profession[index[i]];
+        text_container.innerText = personal_info.Profession[index[i]];
 
         if(i === 2){
             i = 0;
@@ -119,13 +119,13 @@ function setAge(p_year, p_month, p_day){
     const year_timer = setInterval(function(){
         p_year.innerText = `${y} years`;
 
-        if(y === personal_info.age.years){
+        if(y === personal_info.Age.years){
             clearInterval(year_timer);
         } else {
             y++;
         }
 
-    }, (1000/personal_info.age.years));
+    }, (1000/personal_info.Age.years));
 
     const month_timer = setInterval(function(){
         let month_text = 'months';
@@ -136,13 +136,13 @@ function setAge(p_year, p_month, p_day){
 
         p_month.innerText = `${m} ${month_text}`;
 
-        if(Math.abs(m) === personal_info.age.months){
+        if(Math.abs(m) === personal_info.Age.months){
             clearInterval(month_timer);
         } else {
             m++;
         }
 
-    }, (1000/personal_info.age.months));
+    }, (1000/personal_info.Age.months));
 
     const day_timer = setInterval(function(){
 
@@ -154,11 +154,11 @@ function setAge(p_year, p_month, p_day){
 
         p_day.innerText = `${d} ${day_text}`;
 
-        if(Math.abs(d) === personal_info.age.days){
+        if(Math.abs(d) === personal_info.Age.days){
             clearInterval(day_timer);
         } else {
             d++;
         }
 
-    }, (1000/personal_info.age.days));
+    }, (1000/personal_info.Age.days));
 }
