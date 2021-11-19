@@ -4,7 +4,9 @@
 document.addEventListener('keydown', function(e) {
     switch (e.keyCode) {
         case 37:
-            if(section === 2){
+            if(section === 1){
+                move_section('up');
+            } else if(section === 2){
                 move_about_dots('left');
             }
             break;
@@ -12,7 +14,9 @@ document.addEventListener('keydown', function(e) {
             move_section('up');
             break;
         case 39:
-            if(section === 2){
+            if(section === 1){
+                move_section('down');
+            } else if(section === 2){
                 move_about_dots('right');
             }
             break;

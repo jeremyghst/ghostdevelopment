@@ -14,6 +14,12 @@ function scroll_function(){
         } else {
             move_section('down');
         }
+    } else if (section === 1 && event.deltaX !== 0){
+        if(event.deltaX < 0){
+            move_section('down');
+        } else {
+            move_section('up');
+        }
     } else if (section === 2 && event.deltaX !== 0){
         if(event.deltaX < 0){
             move_about_dots('right');
