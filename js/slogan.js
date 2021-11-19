@@ -16,9 +16,7 @@ function type_slogan() {
             setTimeout(function () {
                 if(j < slogan_part.length){
                     if(slogan_part[j] === " "){
-                        const span = document.createElement('span');
-                        span.innerText = '\u00a0';
-                        slogan_part_container[i].appendChild(span);
+                        slogan_part_container[i].innerText += '\u00a0';
                     } else {
                         slogan_part_container[i].innerText += slogan_part[j];
                     }

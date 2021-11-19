@@ -1,24 +1,24 @@
 "use strict"
 
 const personal_info = {
-    'name': {
+    'Name': {
         'firstname': 'Jeremy',
         'lastname': 'Ghost'
         },
-    'age': {
+    'Age': {
         'years': getYears(),
         'months': getMonths(),
         'days': getDays()
     },
-    'location': {
+    'Location': {
         'country': 'the Netherlands'
     },
-    'profession': {
+    'Profession': {
         'first': 'webdeveloper',
         'second': 'trainer',
         'third': 'autisme peer coach'
         },
-    'work': {
+    'Work': {
         'work': 'Spectrum multimedia & it'
     } 
 }

@@ -21,19 +21,19 @@ const frameworks = {
 
 const skills = [
     {
-        'title': 'basics',
+        'title': 'Basics',
         'skills': basics
     },
     { 
-        'title': 'frontend',
+        'title': 'Frontend',
         'skills': frontend
     },
     {
-        'title': 'backend',
+        'title': 'Backend',
         'skills': backend
     },
     {  
-        'title': 'frameworks',
+        'title': 'Frameworks',
         'skills': frameworks
     }];
 

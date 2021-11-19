@@ -2,7 +2,7 @@
 
 const studies = [
     {
-        'title': 'it essentials',
+        'title': 'It essentials',
         'by': {
             'organisation': 'Spectrum multimedia & it'
         },
@@ -13,7 +13,7 @@ const studies = [
         },
     },
     { 
-        'title': 'professional scrum master 1',
+        'title': 'Professional scrum master 1',
         'by':{
             'organisation': 'Scrum'
         },
@@ -24,7 +24,7 @@ const studies = [
         },
     },
     {
-        'title': 'software enginering track',
+        'title': 'Software enginering track',
         'by': {
             'organisation1': 'Capgemini',
             'organisation2': 'Spectrum multimedia & it'
@@ -36,7 +36,7 @@ const studies = [
         },
     },
     {  
-        'title': 'praktijkopleider plus',
+        'title': 'Praktijkopleider plus',
         'by':{
             'organisation': 'Marlijn academie'
         },
