@@ -34,7 +34,14 @@ function swipe_end(){
         } else {
             move_section('up');
         }
-    } else if(section === 2 && swipe_start_x !== swipe_end_x){
+    } else if (section === 1 & swipe_start_x !== swipe_end_x) {
+        if(swipe_start_x > swipe_end_x){
+            move_section('down');
+        } else {
+            move_section('up');
+        }
+    } 
+    else if(section === 2 && swipe_start_x !== swipe_end_x){
         if(swipe_start_x > swipe_end_x){
             move_about_dots('right');
         } else {

@@ -79,7 +79,7 @@ li {
   .dot {
     width: 15px;
     height: 15px;
-    margin: 45px 0;
+    margin: 20px 0;
   }
 }
 
@@ -6483,9 +6483,13 @@ readers do not read off random characters that represent icons */
   }
   .header_nav#header_nav ul li {
     display: none;
+    opacity: 0%;
+    transition: 0.5s;
   }
   .header_nav#header_nav ul li.selected {
     display: block;
+    opacity: 100%;
+    transition: 0.5s;
   }
   .header_nav#header_nav.home {
     background-color: #000000;
@@ -6493,6 +6497,7 @@ readers do not read off random characters that represent icons */
   }
   .header_nav#header_nav.home ul li {
     display: block;
+    opacity: 100%;
     font-size: 16px;
   }
 }
