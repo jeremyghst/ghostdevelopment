@@ -15,7 +15,13 @@ function type_slogan() {
 
             setTimeout(function () {
                 if(j < slogan_part.length){
-                    slogan_part_container[i].innerText += slogan_part[j];
+                    if(slogan_part[j] === " "){
+                        const span = document.createElement('span');
+                        span.innerText = '\u00a0';
+                        slogan_part_container[i].appendChild(span);
+                    } else {
+                        slogan_part_container[i].innerText += slogan_part[j];
+                    }
                     j++
                     type_slogan();
                 } else{
