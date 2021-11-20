@@ -1,12 +1,14 @@
 .article{
 	@include flex(row, center, center);
     height: 100vh;
+	width: 100vw;
 	padding-top: 110px;
 	padding-bottom: 50px;
     overflow: hidden;
     opacity: 0;
     transition: opacity 1s;
-
+    position: relative;
+	z-index: 3;
 
 	&#article_1{
 		padding-top: 210px;
@@ -18,10 +20,6 @@
 		@media all and (orientation: portrait){
 			padding-top: 125px;
 		}
-	}
-	&#article_3{
-		position: relative;
-		z-index: -99;
 	}
 
 	&.selected{

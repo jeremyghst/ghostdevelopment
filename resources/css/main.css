@@ -6,7 +6,8 @@ html {
   overflow: hidden;
 }
 html #body {
-  position: relative;
+  position: fixed;
+  z-index: 1;
   font-family: "Roboto", sans-serif;
   height: 100vh;
   width: 100vw;
@@ -111,9 +112,12 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 #social_media img {
   width: 200px;
@@ -187,16 +191,20 @@ li {
 #portfolio_modal {
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: absolute;
-  z-index: 999999;
   width: 750px;
   max-width: 90%;
   height: 550px;
-  max-height: calc(100% - 115px);
+  max-height: calc(100% - 220px);
   border-radius: 5px;
   overflow: hidden;
   top: -100vh;
   opacity: 0%;
   transition: 1s;
+}
+@media all and (orientation: portrait) {
+  #portfolio_modal {
+    max-height: calc(100% - 200px);
+  }
 }
 #portfolio_modal #portfolio_modal_content {
   display: flex;
@@ -208,9 +216,14 @@ li {
   width: 100%;
 }
 #portfolio_modal.visible {
-  top: 65px;
+  top: 130px;
   opacity: 100%;
   transition: 1s;
+}
+@media all and (orientation: portrait) {
+  #portfolio_modal.visible {
+    top: 65px;
+  }
 }
 
 /*!
@@ -6316,11 +6329,14 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   padding-top: 110px;
   padding-bottom: 50px;
   overflow: hidden;
   opacity: 0;
   transition: opacity 1s;
+  position: relative;
+  z-index: 3;
 }
 .article#article_1 {
   padding-top: 210px;
@@ -6333,10 +6349,6 @@ readers do not read off random characters that represent icons */
   .article#article_1 {
     padding-top: 125px;
   }
-}
-.article#article_3 {
-  position: relative;
-  z-index: -99;
 }
 .article.selected {
   opacity: 1;
@@ -6351,16 +6363,14 @@ readers do not read off random characters that represent icons */
 #aside {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
+  z-index: 5;
   top: 0;
-  left: 0;
   right: 0;
   height: 100vh;
-  width: 1280px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: calc((100vw - 1280px) / 2);
   padding-top: 110px;
   transition: 1s;
 }
@@ -6401,7 +6411,7 @@ readers do not read off random characters that represent icons */
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999999;
+  z-index: 4;
 }
 #header #header_header {
   background-image: linear-gradient(to bottom, #000, #000F3D);
@@ -6439,8 +6449,11 @@ readers do not read off random characters that represent icons */
 
 #main {
   height: 100vh;
+  width: 100vw;
   scroll-behavior: smooth;
   overflow: hidden;
+  position: fixed;
+  z-index: 2;
 }
 
 .header_nav {
@@ -6535,7 +6548,6 @@ readers do not read off random characters that represent icons */
   align-items: center;
   margin: auto 0;
   position: relative;
-  z-index: 999999;
   padding-bottom: 50px;
 }
 
@@ -6557,6 +6569,7 @@ readers do not read off random characters that represent icons */
   width: 100%;
   height: 50px;
   bottom: 0;
+  z-index: 4;
 }
 #footer #copyright {
   color: #7A001F;
@@ -6571,7 +6584,6 @@ readers do not read off random characters that represent icons */
   bottom: -200px;
   height: 200px;
   width: auto;
-  z-index: -99;
   opacity: 0%;
   transition: 1s;
 }
