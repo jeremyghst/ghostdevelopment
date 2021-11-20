@@ -6390,7 +6390,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    padding-right: calc(2.5vw - 7.5px);
+    width: 5%;
   }
 }
 
