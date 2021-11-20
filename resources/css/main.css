@@ -195,8 +195,6 @@ li {
   border-radius: 5px;
   overflow: hidden;
   top: -100vh;
-  bottom: 0;
-  margin: auto 0;
   opacity: 0%;
   transition: 1s;
 }
