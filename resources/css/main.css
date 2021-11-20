@@ -187,10 +187,11 @@ li {
 #portfolio_modal {
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: absolute;
+  z-index: 999999;
   width: 750px;
   max-width: 90%;
   height: 550px;
-  max-height: 100%;
+  max-height: calc(100% - 185px);
   border-radius: 5px;
   overflow: hidden;
   top: -100vh;
