@@ -183,6 +183,7 @@ li {
   font-family: "Rokkitt", serif;
   color: #F8F8FD;
   font-weight: bold;
+  opacity: 60%;
   text-shadow: 0 0 15px #000F3D;
 }
 @media all and (max-width: 400px) {

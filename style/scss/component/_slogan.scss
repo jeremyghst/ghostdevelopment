@@ -11,6 +11,7 @@
         font-family: 'Rokkitt', serif;
         color: $white;
         font-weight: bold;
+        opacity: 60%;
         text-shadow: 0 0 15px $dark_blue;
 
         @media all and (max-width: 400px) {
