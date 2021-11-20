@@ -2,6 +2,7 @@
 	@include flex(row, center, center);
     height: 100vh;
 	padding-top: 110px;
+	padding-bottom: 50px;
     overflow: hidden;
     opacity: 0;
     transition: opacity 1s;
