@@ -165,7 +165,7 @@ li {
   margin: 0 auto;
 }
 #slogan p {
-  margin: 10px;
+  margin: 10px 0;
   font-size: 32px;
   font-family: "Rokkitt", serif;
   color: #F8F8FD;
@@ -6346,7 +6346,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    padding-right: calc(2.5vw - 10px);
+    padding-right: calc(2.5vw - 7.5px);
   }
 }
 
