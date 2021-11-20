@@ -45,6 +45,9 @@ function type_slogan() {
             j = 0;
             remove_peekaboo();
             clearInterval(type_slogan_timeout);
+            setTimeout(() => {
+                peekaboo.classList.add('boo');
+            }, 10000)
             return;
         }
 }
