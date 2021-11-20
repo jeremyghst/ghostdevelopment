@@ -9,6 +9,7 @@
     width: 100vw;
     padding: 50px;
     z-index: 999999;
+    overflow: hidden;
     background-image: $light_gradient;
 
     .use_portrait_img{

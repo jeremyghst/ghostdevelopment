@@ -147,6 +147,7 @@ li {
   width: 100vw;
   padding: 50px;
   z-index: 999999;
+  overflow: hidden;
   background-image: radial-gradient(circle, #D7DBEA, #7180B9);
 }
 .use_portrait .use_portrait_img {
