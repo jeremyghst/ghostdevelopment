@@ -1,23 +1,22 @@
 .article{
 	@include flex(row, center, center);
-    height: calc(100vh - 110px);
-    padding-bottom: 50px;
+    height: 100vh;
+	padding-top: 110px;
     overflow: hidden;
     opacity: 0;
     transition: opacity 1s;
 
 
 	&:first-child{
-		@include flex(row, flex-start, flex-start);
 		background-image: url('../../../assets/ghost/ghost.svg');
 		background-repeat: no-repeat;
 		background-size: 30vw;
 		background-position: center center;
-		height: calc(100vh - 210px);
+		padding-top: 210px;
 
 		@media all and (orientation: portrait){
 			background-size: 60vw;
-			height: calc(100vh - 125px);
+			padding-top: 125px;
 		}
 	}
 
@@ -28,7 +27,7 @@
 
 
 	@media all and (orientation: portrait){
-		height: calc(100vh - 60px);
+		padding-top: 65px;
 	}
 }
 

@@ -1,9 +1,18 @@
 #main{
-    height: calc(100vh - 110px);
+    height: 100vh;
     scroll-behavior: smooth;
     overflow: hidden;
 
-	&.home{
-		height: calc(100vh - 210px);
-	}
+	// &.home{
+	// 	height: calc(100vh - 210px);
+
+    //     @media all and (orientation: portrait){
+	// 		height: calc(100vh - 125px);
+	// 	}
+	// }
+
+    // @media all and (orientation: portrait){
+    //     background-size: 60vw;
+    //     height: calc(100vh - 65px);
+    // }
 }
