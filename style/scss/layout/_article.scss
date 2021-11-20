@@ -20,13 +20,6 @@
 		}
 	}
 
-	&#article_2{
-		@media all and (max-width: 1280px){
-			justify-content: flex-start;
-			margin-left: 5vw;
-		}
-	}
-
 	&.selected{
 		opacity: 1;
 		transition: opacity 1s;

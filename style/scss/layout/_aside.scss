@@ -23,7 +23,7 @@
         padding-top: 65px;
     }
     @media all and (max-width: 1280px){
-        padding-right: 5vw;
+        padding-right: calc(2.5vw - 10px);
     }
 }
 

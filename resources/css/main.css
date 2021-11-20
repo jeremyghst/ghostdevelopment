@@ -6304,12 +6304,6 @@ readers do not read off random characters that represent icons */
     padding-top: 125px;
   }
 }
-@media all and (max-width: 1280px) {
-  .article#article_2 {
-    justify-content: flex-start;
-    margin-left: 5vw;
-  }
-}
 .article.selected {
   opacity: 1;
   transition: opacity 1s;
@@ -6352,7 +6346,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    padding-right: 5vw;
+    padding-right: calc(2.5vw - 10px);
   }
 }
 
@@ -6562,9 +6556,9 @@ readers do not read off random characters that represent icons */
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: relative;
   width: 750px;
-  max-width: calc(100% - 10vw - 15px);
+  max-width: 90%;
   height: 550px;
-  max-height: 100%;
+  max-height: 95%;
   border-radius: 5px;
   overflow: hidden;
 }
