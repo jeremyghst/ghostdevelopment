@@ -6468,6 +6468,7 @@ readers do not read off random characters that represent icons */
     display: none;
     opacity: 0%;
     transition: 0.5s;
+    margin: 0;
   }
   .header_nav#header_nav ul li.selected {
     display: block;
@@ -6482,6 +6483,7 @@ readers do not read off random characters that represent icons */
     display: block;
     opacity: 100%;
     font-size: 16px;
+    margin: 0 10px;
   }
 }
 .header_nav#about_header_nav ul, .header_nav#portfolio_header_nav ul {
