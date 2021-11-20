@@ -160,7 +160,7 @@ li {
   width: 100vw;
   padding: 50px;
   z-index: 999999;
-  background-color: #7180B9;
+  background-image: radial-gradient(circle, #D7DBEA, #7180B9);
 }
 .use_portrait .use_portrait_img {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
