@@ -3,6 +3,7 @@
 html {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 html #body {
   position: relative;
@@ -6345,7 +6346,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    right: calc(5% - 10px);
+    right: calc(5vw - 10px);
   }
 }
 
