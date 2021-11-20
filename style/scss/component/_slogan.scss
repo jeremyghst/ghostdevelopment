@@ -9,9 +9,9 @@
         margin: 10px;
         font-size: 32px;
         font-family: 'Rokkitt', serif;
-        color: $red;
+        color: $white;
         font-weight: bold;
-        text-shadow: 0 0 3px $white;
+        text-shadow: 0 0 15px $dark_blue;
 
         @media all and (max-width: 400px) {
             font-size: 22px;
