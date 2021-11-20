@@ -13,6 +13,7 @@
     background-image: $light_gradient;
 
     .use_portrait_img{
+        animation: $shake;
         height: 100%;
     }
 }
