@@ -5,7 +5,7 @@
     width: 750px;
     max-width: 90%;
     height: 550px;
-    max-height: calc(100% - 185px);
+    max-height: calc(100% - 115px);
     border-radius: 5px;
     overflow: hidden;
     top: -100vh;
@@ -22,7 +22,7 @@
     }
 
     &.visible{
-        top: 0;
+        top: 65px;
         opacity: 100%;
         transition: 1s;
     }
