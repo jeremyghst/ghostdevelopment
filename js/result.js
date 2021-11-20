@@ -21,9 +21,13 @@ function show_section(){
     highlight_dots();
     head_header();
 
+    //Triggers section function that shows content
     switch(section){
+        case 1:
+            remove_peekaboo();
         case 2:
             show_about_section();
+            remove_peekaboo();
             break;
         case 3:
             clearInterval(type_slogan_timeout);
@@ -31,6 +35,9 @@ function show_section(){
             j = 0;
             slogan_container.innerHTML = "";
             type_slogan();
+            break;
+        case 4:
+            remove_peekaboo();
             break;
     }
 }

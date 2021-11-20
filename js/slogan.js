@@ -15,7 +15,7 @@ function type_slogan() {
         if(i < slogan.length){
             slogan_part = slogan[i].split("");
 
-            if(i === 2){
+            if(i === 2 && section === 3){
                 peekaboo.classList.add('boo');
             }
             type_slogan_timeout = setTimeout(function () {
@@ -43,7 +43,7 @@ function type_slogan() {
         } else{
             i = 0;
             j = 0;
-            peekaboo.classList.remove('boo');
+            remove_peekaboo();
             clearInterval(type_slogan_timeout);
             return;
         }
@@ -51,4 +51,10 @@ function type_slogan() {
 
 if(section === 2){
     type_slogan();
+}
+
+function remove_peekaboo(){
+    if (peekaboo.classList.contains('boo')){
+        peekaboo.classList.remove('boo');
+    }
 }
