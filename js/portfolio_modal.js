@@ -3,11 +3,17 @@ peekaboo.addEventListener('click', toggle_portfolio_modal);
 
 const portfolio_modal = document.getElementById('portfolio_modal');
 function toggle_portfolio_modal(){
-    portfolio_modal.classList.toggle('visible');
+    if(portfolio_modal.classList.contains('visible')){
+        portfolio_modal.classList.toggle('visible');
+    }
 
-    peekaboo.classList.remove('boo');
+    if(portfolio_modal.classList.contains('visible')){
+        portfolio_modal.classList.remove('visible');
+    }
     setTimeout(() => {
-        peekaboo.classList.add('boo');
+        if(portfolio_modal.classList.contains('visible')){
+            portfolio_modal.classList.add('visible');
+        }
     }, 1000)
 }
 
