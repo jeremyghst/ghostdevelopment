@@ -181,8 +181,9 @@ li {
   margin: 10px;
   font-size: 32px;
   font-family: "Rokkitt", serif;
-  color: #F8F8FD;
-  text-shadow: 0 0 3px #000F3D;
+  color: #7A001F;
+  font-weight: bold;
+  text-shadow: 0 0 3px #F8F8FD;
 }
 @media all and (max-width: 400px) {
   #slogan p {

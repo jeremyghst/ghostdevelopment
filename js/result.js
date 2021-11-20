@@ -22,15 +22,15 @@ function show_section(){
     head_header();
 
     switch(section){
-        case 1:
+        case 2:
+            show_about_section();
+            break;
+        case 3:
             clearInterval(type_slogan_timeout);
             i = 0;
             j = 0;
             slogan_container.innerHTML = "";
             type_slogan();
-            break;
-        case 2:
-            show_about_section();
             break;
     }
 }
