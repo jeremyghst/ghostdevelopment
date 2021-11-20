@@ -9,7 +9,7 @@
     width: 100vw;
     padding: 50px;
     z-index: 999999;
-    background-color: $light_blue;
+    background-image: $light_gradient;
 
     .use_portrait_img{
         animation: $shake;
