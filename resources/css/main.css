@@ -6500,6 +6500,7 @@ readers do not read off random characters that represent icons */
   margin: auto 0;
   position: relative;
   z-index: 999999;
+  padding-bottom: 50px;
 }
 
 #about_aside_nav, #portfolio_aside_nav {
