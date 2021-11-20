@@ -10,4 +10,32 @@
     font-size: 18px;
     font-weight: 400;
   }
+
+  #peekaboo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -200px;
+    height: 200px;
+    width: auto;
+    z-index: -99;
+    opacity: 0%;
+    transition: 0.5s;
+
+    &.boo{
+      bottom: -85px;
+      opacity: 100%;
+      transition: 0.5s;
+
+      &:hover{
+        animation: $shake;
+        opacity: 60%;
+      }
+
+      &:active{
+        opacity: 20%;
+      }
+    }
+  }
 }

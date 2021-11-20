@@ -6546,6 +6546,30 @@ readers do not read off random characters that represent icons */
   font-size: 18px;
   font-weight: 400;
 }
+#footer #peekaboo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -200px;
+  height: 200px;
+  width: auto;
+  z-index: -99;
+  opacity: 0%;
+  transition: 0.5s;
+}
+#footer #peekaboo.boo {
+  bottom: -85px;
+  opacity: 100%;
+  transition: 0.5s;
+}
+#footer #peekaboo.boo:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  opacity: 60%;
+}
+#footer #peekaboo.boo:active {
+  opacity: 20%;
+}
 
 #about_container {
   background-image: linear-gradient(to bottom, #000, #000F3D);
