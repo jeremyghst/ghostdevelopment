@@ -6292,15 +6292,14 @@ readers do not read off random characters that represent icons */
   transition: opacity 1s;
 }
 .article:first-child {
-  background-image: url("../../../assets/ghost/ghost.svg");
-  background-repeat: no-repeat;
-  background-size: 30vw;
-  background-position: center center;
   padding-top: 210px;
+}
+.article:first-child #home_logo {
+  width: 500px;
+  max-width: 80%;
 }
 @media all and (orientation: portrait) {
   .article:first-child {
-    background-size: 60vw;
     padding-top: 125px;
   }
 }
