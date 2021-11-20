@@ -6296,7 +6296,7 @@ readers do not read off random characters that represent icons */
 }
 .article:first-child #home_logo {
   width: 500px;
-  max-width: 80%;
+  max-width: 70%;
 }
 @media all and (orientation: portrait) {
   .article:first-child {
@@ -6345,7 +6345,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    right: calc(2.5% - 10px);
+    right: calc(5% - 10px);
   }
 }
 
@@ -6555,7 +6555,7 @@ readers do not read off random characters that represent icons */
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: relative;
   width: 750px;
-  max-width: 90%;
+  max-width: 80%;
   height: 550px;
   max-height: 95%;
   border-radius: 5px;
