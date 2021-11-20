@@ -11,7 +11,7 @@ html #body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-image: #7A001F;
+  background-image: radial-gradient(circle, #D7DBEA, #7180B9);
 }
 
 * {
