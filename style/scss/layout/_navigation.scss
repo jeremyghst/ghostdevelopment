@@ -81,6 +81,13 @@
 					opacity: 100%;
 					font-size: 16px;
 					margin: 0 10px;
+
+					&:first-child{
+						margin-left: 0;
+					}
+					&:last-child{
+						margin-right: 0;
+					}
 				}
 			}
 		}

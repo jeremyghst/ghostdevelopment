@@ -6538,6 +6538,12 @@ readers do not read off random characters that represent icons */
     font-size: 16px;
     margin: 0 10px;
   }
+  .header_nav#header_nav.home ul li:first-child {
+    margin-left: 0;
+  }
+  .header_nav#header_nav.home ul li:last-child {
+    margin-right: 0;
+  }
 }
 .header_nav#about_header_nav ul, .header_nav#portfolio_header_nav ul, .header_nav#portfolio_modal_header_nav ul {
   margin: 20px auto;
