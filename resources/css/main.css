@@ -11,7 +11,7 @@ html #body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #7180B9;
+  background-image: radial-gradient(circle, #F8F8FD, #7180B9);
 }
 html #body.home {
   padding-top: 210px;
@@ -182,8 +182,7 @@ li {
   font-size: 32px;
   font-family: "Rokkitt", serif;
   color: #F8F8FD;
-  opacity: 60%;
-  text-shadow: 0 0 3px #7A001F;
+  text-shadow: 0 0 3px #000F3D;
 }
 @media all and (max-width: 400px) {
   #slogan p {
@@ -6384,10 +6383,13 @@ readers do not read off random characters that represent icons */
   position: fixed;
   top: 0;
   width: 100%;
-  background-image: linear-gradient(to bottom, #000, #000F3D);
   z-index: 999999;
 }
-#header #head_header {
+#header #header_header {
+  background-image: linear-gradient(to bottom, #000, #000F3D);
+  width: 100%;
+}
+#header #header_header #head_header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -6399,20 +6401,20 @@ readers do not read off random characters that represent icons */
   overflow: hidden;
   transition: 0.5s;
 }
-#header #head_header.home {
+#header #header_header #head_header.home {
   height: 100px;
   transition: 0.5s;
 }
 @media all and (orientation: portrait) {
-  #header #head_header.home {
+  #header #header_header #head_header.home {
     height: 60px;
   }
 }
-#header #head_header #logo {
+#header #header_header #head_header #logo {
   height: 50px;
 }
 @media all and (orientation: portrait) {
-  #header #head_header #logo {
+  #header #header_header #head_header #logo {
     height: 30px;
   }
 }
@@ -6478,7 +6480,7 @@ readers do not read off random characters that represent icons */
 @media all and (orientation: portrait) {
   .header_nav#header_nav {
     height: 65px;
-    background-color: #7180B9;
+    background-color: transparent;
     transition: 0.5s;
   }
   .header_nav#header_nav ul li {

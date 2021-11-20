@@ -5,7 +5,8 @@ $dark_blue: #000F3D;
 $red: #7A001F;
 $black: #000000;
 
-$dark_gradient: linear-gradient(to bottom, #000, #000F3D);
+$light_gradient: radial-gradient(circle, $white, $light_blue);
+$dark_gradient: linear-gradient(to bottom, $black, $dark_blue);
 
 //Ghost animation
 $shake: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;

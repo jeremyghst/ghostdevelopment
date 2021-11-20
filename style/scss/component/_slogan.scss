@@ -10,8 +10,7 @@
         font-size: 32px;
         font-family: 'Rokkitt', serif;
         color: $white;
-        opacity: 60%;
-        text-shadow: 0 0 3px $red;
+        text-shadow: 0 0 3px $dark_blue;
 
         @media all and (max-width: 400px) {
             font-size: 22px;

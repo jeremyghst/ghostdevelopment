@@ -3,32 +3,36 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient(to bottom,#000, #000F3D); 
     z-index: 999999;
 
-    #head_header{
-        @include flex(row, flex-start, center);
-        width: 1280px;
-        max-width: 90%;
-        margin: 0 auto;
-        height: 0px;
-        overflow: hidden;
-        transition: 0.5s;
+    #header_header{
+        background-image: linear-gradient(to bottom,#000, #000F3D); 
+        width: 100%;
 
-        &.home{
-            height: 100px;
+        #head_header{
+            @include flex(row, flex-start, center);
+            width: 1280px;
+            max-width: 90%;
+            margin: 0 auto;
+            height: 0px;
+            overflow: hidden;
             transition: 0.5s;
 
-            @media all and (orientation: portrait){
-                height: 60px;
+            &.home{
+                height: 100px;
+                transition: 0.5s;
+
+                @media all and (orientation: portrait){
+                    height: 60px;
+                }
             }
-        }
 
-        #logo{
-            height: 50px;
+            #logo{
+                height: 50px;
 
-            @media all and (orientation: portrait){
-                height: 30px;
+                @media all and (orientation: portrait){
+                    height: 30px;
+                }
             }
         }
     }
