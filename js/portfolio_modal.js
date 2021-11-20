@@ -3,18 +3,17 @@ peekaboo.addEventListener('click', toggle_portfolio_modal);
 
 const portfolio_modal = document.getElementById('portfolio_modal');
 function toggle_portfolio_modal(){
-    if(portfolio_modal.classList.contains('visible')){
-        portfolio_modal.classList.toggle('visible');
-    }
+    portfolio_modal.classList.toggle('visible');
 
-    if(portfolio_modal.classList.contains('visible')){
-        portfolio_modal.classList.remove('visible');
+    if(peekaboo.classList.contains('boo')){
+        peekaboo.classList.remove('boo');
+        
+        setTimeout(() => {
+            if(section === 3){
+                peekaboo.classList.add('boo');
+            }
+        }, 1000)
     }
-    setTimeout(() => {
-        if(portfolio_modal.classList.contains('visible')){
-            portfolio_modal.classList.add('visible');
-        }
-    }, 1000)
 }
 
 function close_portfolio_modal(){
