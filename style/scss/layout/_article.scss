@@ -19,6 +19,10 @@
 			padding-top: 125px;
 		}
 	}
+	&#article_3{
+		position: relative;
+		z-index: -99;
+	}
 
 	&.selected{
 		opacity: 1;

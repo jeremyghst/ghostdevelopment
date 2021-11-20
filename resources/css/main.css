@@ -36,14 +36,14 @@ li {
   margin: 30px 0;
   transition: background-color 1s;
 }
-.dot.dot_about_item {
+.dot.dot_about_item, .dot.dot_portfolio_item {
   background-color: #7180B9;
   width: 15px;
   height: 15px;
   margin: 0 30px;
 }
 @media all and (orientation: portrait) {
-  .dot.dot_about_item {
+  .dot.dot_about_item, .dot.dot_portfolio_item {
     width: 10px;
     height: 10px;
     margin: 0 15px;
@@ -182,6 +182,36 @@ li {
   #slogan p {
     font-size: 16px;
   }
+}
+
+#portfolio_modal {
+  background-image: linear-gradient(to bottom, #000, #000F3D);
+  position: absolute;
+  width: 750px;
+  max-width: 90%;
+  height: 550px;
+  max-height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  top: -100vh;
+  bottom: 0;
+  margin: auto 0;
+  opacity: 0%;
+  transition: 1s;
+}
+#portfolio_modal #portfolio_modal_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+#portfolio_modal.visible {
+  top: 0;
+  opacity: 100%;
+  transition: 1s;
 }
 
 /*!
@@ -6305,6 +6335,10 @@ readers do not read off random characters that represent icons */
     padding-top: 125px;
   }
 }
+.article#article_3 {
+  position: relative;
+  z-index: -99;
+}
 .article.selected {
   opacity: 1;
   transition: opacity 1s;
@@ -6351,7 +6385,7 @@ readers do not read off random characters that represent icons */
   }
 }
 
-#about_aside, #portfolio_aside {
+#about_aside, #portfolio_aside, #portfolio_modal_aside {
   position: absolute;
   top: unset;
   bottom: 20px;
@@ -6487,10 +6521,10 @@ readers do not read off random characters that represent icons */
     margin: 0 10px;
   }
 }
-.header_nav#about_header_nav ul, .header_nav#portfolio_header_nav ul {
+.header_nav#about_header_nav ul, .header_nav#portfolio_header_nav ul, .header_nav#portfolio_modal_header_nav ul {
   margin: 20px auto;
 }
-.header_nav#about_header_nav ul li, .header_nav#portfolio_header_nav ul li {
+.header_nav#about_header_nav ul li, .header_nav#portfolio_header_nav ul li, .header_nav#portfolio_modal_header_nav ul li {
   margin: 0 10px;
   font-size: 16px;
 }
@@ -6506,7 +6540,7 @@ readers do not read off random characters that represent icons */
   padding-bottom: 50px;
 }
 
-#about_aside_nav, #portfolio_aside_nav {
+#about_aside_nav, #portfolio_aside_nav, #portfolio_modal_aside_nav {
   display: flex;
   flex-direction: row;
   justify-content: center;

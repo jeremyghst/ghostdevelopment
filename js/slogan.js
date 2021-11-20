@@ -15,8 +15,11 @@ function type_slogan() {
         if(i < slogan.length){
             slogan_part = slogan[i].split("");
 
-            if(i === 2 && section === 3){
+            if(i === 1 && section === 3){
                 peekaboo.classList.add('boo');
+            }
+            if(i === 3 && section === 3){
+                peekaboo.classList.remove('boo');
             }
             type_slogan_timeout = setTimeout(function () {
                 if(j < slogan_part.length){
@@ -45,21 +48,13 @@ function type_slogan() {
             j = 0;
             remove_peekaboo();
             clearInterval(type_slogan_timeout);
-            setTimeout(() => {
-                if(section === 3){
-                    peekaboo.classList.add('boo');
-                }
-            }, 10000)
+            if(section === 3){
+                peekaboo.classList.add('boo');
+            }
             return;
         }
 }
 
 if(section === 2){
     type_slogan();
-}
-
-function remove_peekaboo(){
-    if (peekaboo.classList.contains('boo')){
-        peekaboo.classList.remove('boo');
-    }
 }

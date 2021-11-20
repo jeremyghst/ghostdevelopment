@@ -1,0 +1,29 @@
+#portfolio_modal{
+    background-image: linear-gradient(to bottom, #000, #000F3D);
+    position: absolute;
+    width: 750px;
+    max-width: 90%;
+    height: 550px;
+    max-height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    top: -100vh;
+    bottom: 0;
+    margin: auto 0;
+    opacity: 0%;
+    transition: 1s;
+
+    #portfolio_modal_content{
+        @include flex(column, flex-start, center);
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+    &.visible{
+        top: 0;
+        opacity: 100%;
+        transition: 1s;
+    }
+}
+

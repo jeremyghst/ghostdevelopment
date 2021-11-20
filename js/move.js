@@ -47,3 +47,4 @@ function move_about_dots(dir = null){
     return show_about_section();
 }
 
+let portfolio_modal_section = 1;

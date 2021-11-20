@@ -25,9 +25,11 @@ function show_section(){
     switch(section){
         case 1:
             remove_peekaboo();
+            close_portfolio_modal();
         case 2:
             show_about_section();
             remove_peekaboo();
+            close_portfolio_modal();
             break;
         case 3:
             clearInterval(type_slogan_timeout);
@@ -35,9 +37,11 @@ function show_section(){
             j = 0;
             slogan_container.innerHTML = "";
             type_slogan();
+            show_portfolio_modal_section();
             break;
         case 4:
             remove_peekaboo();
+            close_portfolio_modal();
             break;
     }
 }
@@ -62,6 +66,13 @@ function show_about_section(){
     highlight_about_dots();
 }
 
+//To show the right subsection in section portfolio
+function show_portfolio_modal_section(){
+    //To highlight the right list_item in #header_portfolio_modal_nav
+    highlight_portfolio_modal_navigation();
+    //To hightlight the right dot_portfolio_modal_item in #portfolio_modal_nav
+    highlight_portfolio_modal_dots();
+}
 
 //To highlight the right list_item in #header_nav
 function highlight_navigation(){
@@ -109,4 +120,28 @@ function highlight_about_dots(){
     
     const selected_dot_about_item = document.getElementById('about_dot_' + about_section);
     selected_dot_about_item.classList.add('selected')
+}
+
+//To highlight the right list_item in #header_about_nav
+function highlight_portfolio_modal_navigation(){
+    const list_portfolio_items = Array.from(document.getElementsByClassName('list_portfolio_items'));
+
+    list_portfolio_items.forEach(item => {
+        item.classList.remove('selected')
+    });
+    
+    const selected_list_portfolio_items = document.getElementById('list_portfolio_item_' + portfolio_modal_section);
+    selected_list_portfolio_items.classList.add('selected')
+}
+
+//To hightlight the right dot_about_item in #about_nav
+function highlight_portfolio_modal_dots(){
+    const dot_portfolio_items = Array.from(document.getElementsByClassName('dot_portfolio_item'));
+
+    dot_portfolio_items.forEach(dot => {
+        dot.classList.remove('selected')
+    });
+    
+    const selected_dot_portfolio_items = document.getElementById('dot_portfolio_item_' + portfolio_modal_section);
+    selected_dot_portfolio_items.classList.add('selected')
 }
