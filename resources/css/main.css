@@ -6576,6 +6576,7 @@ readers do not read off random characters that represent icons */
   color: #7A001F;
   font-size: 18px;
   font-weight: 400;
+  z-index: 4;
 }
 #footer #peekaboo {
   position: absolute;
