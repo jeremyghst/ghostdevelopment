@@ -18,15 +18,5 @@ html{
         padding-top: 125px;
       }
     }
-
-    @media all and (orientation: portrait){
-      padding-top: 65px;
-      height: 100vw;
-      width: 100vh;
-    }
-  }
-  @media all and (orientation: portrait){
-    height: 100vw;
-    width: 100vh;
-  }     
+  }    
 }
