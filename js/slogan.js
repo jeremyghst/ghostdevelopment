@@ -1,24 +1,29 @@
 "use strict"
 
+let type_slogan_timeout;
 let i = 0;
 let j = 0;
+let p;
 
 const slogan_container = document.getElementById('slogan');
-const slogan_part_container = slogan_container.getElementsByTagName('p');
-
-const slogan = ['The worst part about', 'having all those bugs', 'is', 'people expect you', 'to behave as if', "you don't"];
+const slogan = ['The worst part about', 'having all those bugs', 'is,', 'people expect you', 'to behave as if', "you don't"];
 let slogan_part = slogan[i].split("");
 
 function type_slogan() {
         if(i < slogan.length){
             slogan_part = slogan[i].split("");
 
-            setTimeout(function () {
+            type_slogan_timeout = setTimeout(function () {
                 if(j < slogan_part.length){
+                    if(j === 0){
+                        p = document.createElement('p');
+                        slogan_container.appendChild(p);
+                    }
+
                     if(slogan_part[j] === " "){
-                        slogan_part_container[i].innerText += '\u00a0';
+                        p.innerText += '\u00a0';
                     } else {
-                        slogan_part_container[i].innerText += slogan_part[j];
+                        p.innerText += slogan_part[j];
                     }
                     j++
                     type_slogan();
@@ -31,6 +36,9 @@ function type_slogan() {
 
             slogan_part = slogan[i].split("");
         } else{
+            i = 0;
+            j = 0;
+            clearInterval(type_slogan_timeout);
             return;
         }
 }

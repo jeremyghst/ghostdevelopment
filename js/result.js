@@ -21,8 +21,17 @@ function show_section(){
     highlight_dots();
     head_header();
 
-    if(section === 2){
-        show_about_section();
+    switch(section){
+        case 1:
+            clearInterval(type_slogan_timeout);
+            i = 0;
+            j = 0;
+            slogan_container.innerHTML = "";
+            type_slogan();
+            break;
+        case 2:
+            show_about_section();
+            break;
     }
 }
 show_section();
