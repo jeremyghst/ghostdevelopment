@@ -46,6 +46,13 @@
 				@media all and (orientation: portrait){
 					margin: 0 10px;
 				}
+
+				&:first-child{
+					margin-left: 0;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
 			}
 		}
 		@media all and (orientation: portrait){

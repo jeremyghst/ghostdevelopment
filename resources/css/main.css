@@ -6505,6 +6505,12 @@ readers do not read off random characters that represent icons */
     margin: 0 10px;
   }
 }
+.header_nav#header_nav ul li:first-child {
+  margin-left: 0;
+}
+.header_nav#header_nav ul li:last-child {
+  margin-right: 0;
+}
 @media all and (orientation: portrait) {
   .header_nav#header_nav {
     height: 65px;
