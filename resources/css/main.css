@@ -6346,7 +6346,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    right: calc(5vw - 10px);
+    padding-right: calc(5vw - 7.5px);
   }
 }
 
