@@ -6292,16 +6292,22 @@ readers do not read off random characters that represent icons */
   opacity: 0;
   transition: opacity 1s;
 }
-.article:first-child {
+.article#article_1 {
   padding-top: 210px;
 }
-.article:first-child #home_logo {
+.article#article_1 #home_logo {
   width: 500px;
   max-width: 70%;
 }
 @media all and (orientation: portrait) {
-  .article:first-child {
+  .article#article_1 {
     padding-top: 125px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .article#article_2 {
+    justify-content: flex-start;
+    margin-left: 5vw;
   }
 }
 .article.selected {
@@ -6346,7 +6352,7 @@ readers do not read off random characters that represent icons */
 }
 @media all and (max-width: 1280px) {
   #aside {
-    padding-right: calc(5vw - 7.5px);
+    padding-right: 5vw;
   }
 }
 
@@ -6556,9 +6562,9 @@ readers do not read off random characters that represent icons */
   background-image: linear-gradient(to bottom, #000, #000F3D);
   position: relative;
   width: 750px;
-  max-width: 80%;
+  max-width: calc(100% - 10vw - 15px);
   height: 550px;
-  max-height: 95%;
+  max-height: 100%;
   border-radius: 5px;
   overflow: hidden;
 }
