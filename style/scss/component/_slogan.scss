@@ -1,0 +1,25 @@
+#slogan{
+    @include flex(column, center, flex-start);
+    height: 100%;
+    width: 1280px;
+    max-width: 90%;
+    margin: 0 auto;
+
+    p{
+        margin: 10px 0;
+        font-size: 32px;
+        font-family: 'Rokkitt', serif;
+        color: $white;
+        opacity: 60%;
+        text-shadow: 0 0 15px $dark_blue;
+
+        @media all and (max-width: 400px) {
+            font-size: 22px;
+        }
+
+
+        @media all and (max-width: 300px) {
+            font-size: 16px;
+        }
+    }
+}

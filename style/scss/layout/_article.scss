@@ -1,0 +1,38 @@
+.article{
+	@include flex(row, center, center);
+    height: 100vh;
+	width: 100vw;
+	padding-top: 110px;
+	padding-bottom: 50px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+	z-index: 3;
+
+	&#article_1{
+		padding-top: 210px;
+		
+		#home_logo{
+			width: 500px;
+			max-width: 70%;
+		}
+		@media all and (orientation: portrait){
+			padding-top: 125px;
+		}
+	}
+
+	&.selected{
+		opacity: 1;
+		transition: opacity 1s;
+	}
+
+
+	@media all and (orientation: portrait){
+		padding-top: 65px;
+	}
+}
+
+
+
+

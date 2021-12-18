@@ -1,0 +1,17 @@
+//Ghost colors
+$white: #F8F8FD;
+
+$white_blue: #D7DBEA;
+$light_blue: #7180B9;
+$dark_blue: #000F3D;
+$red: #7A001F;
+$black: #000000;
+
+$light_gradient: radial-gradient(circle, $white_blue, $light_blue);
+$dark_gradient: linear-gradient(to bottom, $black, $dark_blue);
+
+//Ghost animation
+$shake: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+
+//Font awesome
+$fa-font-path: "../webfonts";

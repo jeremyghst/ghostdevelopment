@@ -1,0 +1,30 @@
+@import "./abstracts/variables";
+@import "./abstracts/maps";
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typografic";
+@import "./base/reset";
+
+@import "./component/dots";
+@import "./component/skills";
+@import "./component/shake";
+@import "./component/studies";
+@import "./component/personal";
+@import "./component/social_media";
+@import "./component/use_portrait";
+@import "./component/slogan";
+@import "./component/portfolio_modal";
+
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
+@import "layout/article";
+@import "layout/aside";
+@import "layout/header";
+@import "layout/main";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "pages/about";
